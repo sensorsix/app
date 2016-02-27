@@ -1,6 +1,8 @@
 .svn
 web/blog/
 web/libs/
+web/uploads/
+
 log/
 cache/
 apps/admin/config/app.yml
