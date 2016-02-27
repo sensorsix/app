@@ -1,0 +1,5 @@
+Domain:
+  columns:
+    name:
+      type: string(128)
+      notnull: true

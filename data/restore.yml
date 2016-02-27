@@ -1,0 +1,1057 @@
+Role:
+  restored_role:
+    id: '11039'
+    name: 'Kunder - ikke tilmeldt brugerpanel'
+    decision_id: '3637'
+    prioritize: false
+    show_criteria_weights: false
+    show_alternatives_score: false
+    prioritization_method: 'five point scale'
+    view_matrix: false
+    updateable: false
+    anonymous: false
+    show_comments: false
+    collect_items: null
+    display_items: null
+    allow_voting: null
+    comment: "<p>\n	<span style=\"font-size: 20px;\"><strong>K&aelig;re netv&aelig;rksdeltager i Bluegarden</strong></span><br />\n	Vi er glade for, at du vil deltage i vores brugerunders&oslash;gelse, s&aring; vi ogs&aring; f&aring;r dit input til, hvad vores kommende l&oslash;sninger b&oslash;r indeholde for at underst&oslash;tte dine behov, n&aring;r du l&oslash;ser dine arbejdsopgaver.<br />\n	Vi er i gang med at planl&aelig;gge v&aelig;sentlige forbedringer af de rapporteringsmuligheder, du i dag oplever i vores MultiL&oslash;n produkter og Orkid&eacute;. I den forbindelse vil vi gerne have dit input til konkrete rapportpakker/dashboards &ndash; herunder vigtigheden af pakkerne set i forhold til hinanden og en prioritering af selve indholdet af pakkerne/dashboards.<br />\n	Du skal forestille dig, at der i hver pakke ligger en r&aelig;kke fast definerede rapporter, som er opdaterede, n&aring;r du &aring;bner dem. Hvor det giver mening, vil der selvf&oslash;lgelig ogs&aring; v&aelig;re mulighed for at v&aelig;lge tidsintervaller. Rapporterne pr&aelig;senteres i et l&aelig;kkert lay-out, og planen er, at du som udgangspunkt selv kan koble yderligere &oslash;vrige data p&aring;, skulle du mangle oplysninger.<br />\n	Det vil tage omkring 10 minutter at besvare vores sp&oslash;rgsm&aring;l, og det vil give os vigtig information til den videre proces.<br />\n	Du er meget velkommen til at notere kommentarer undervejs &ndash; al input er vigtigt for os! Vi gl&aelig;der os til at l&aelig;se dine svar.</p>\n<p>\n	Venlig hilsen Bluegarden</p>\n"
+    token: 32fbd8
+    continue_url: 'http://sensorsix.com/role/bfc533/measure'
+    language: da
+    created_at: '2014-05-02 10:49:21'
+    updated_at: '2014-05-02 13:49:48'
+
+Response:
+  response_0:
+    id: '18586'
+    decision_id: '3637'
+    ip_address: 77.243.43.170
+    Role: restored_role
+    user_id: null
+    email_address: shs@skforsyning.dk
+    created_at: '2014-05-05 07:47:39'
+    updated_at: '2014-05-05 07:47:39'
+  response_1:
+    id: '18596'
+    decision_id: '3637'
+    ip_address: 195.41.216.130
+    Role: restored_role
+    user_id: null
+    email_address: phk@radiometer.dk
+    created_at: '2014-05-05 08:30:06'
+    updated_at: '2014-05-05 08:30:06'
+  response_2:
+    id: '18610'
+    decision_id: '3637'
+    ip_address: 212.130.50.132
+    Role: restored_role
+    user_id: null
+    email_address: awn@nationalbanken.dk
+    created_at: '2014-05-05 08:58:57'
+    updated_at: '2014-05-05 08:58:57'
+  response_3:
+    id: '18612'
+    decision_id: '3637'
+    ip_address: 131.165.83.28
+    Role: restored_role
+    user_id: null
+    email_address: kab@synoptik.dk
+    created_at: '2014-05-05 09:04:47'
+    updated_at: '2014-05-05 09:04:47'
+  response_4:
+    id: '18628'
+    decision_id: '3637'
+    ip_address: 85.236.67.83
+    Role: restored_role
+    user_id: null
+    email_address: cal@j-l.com
+    created_at: '2014-05-06 08:43:59'
+    updated_at: '2014-05-06 08:43:59'
+  response_5:
+    id: '18635'
+    decision_id: '3637'
+    ip_address: 77.233.245.52
+    Role: restored_role
+    user_id: null
+    email_address: anita.poulsen@atkinsglobal.com
+    created_at: '2014-05-06 13:59:22'
+    updated_at: '2014-05-06 13:59:22'
+  response_6:
+    id: '18641'
+    decision_id: '3637'
+    ip_address: 194.255.38.202
+    Role: restored_role
+    user_id: null
+    email_address: mieh@Q8.dk
+    created_at: '2014-05-06 14:18:53'
+    updated_at: '2014-05-06 14:18:53'
+  response_7:
+    id: '18726'
+    decision_id: '3637'
+    ip_address: 80.198.126.234
+    Role: restored_role
+    user_id: null
+    email_address: ssh@dp.dk
+    created_at: '2014-05-07 14:40:43'
+    updated_at: '2014-05-07 14:40:43'
+  response_8:
+    id: '18839'
+    decision_id: '3637'
+    ip_address: 194.239.188.2
+    Role: restored_role
+    user_id: null
+    email_address: sva@spks.dk
+    created_at: '2014-05-12 13:48:55'
+    updated_at: '2014-05-12 13:48:55'
+  response_9:
+    id: '18869'
+    decision_id: '3637'
+    ip_address: 212.97.200.24
+    Role: restored_role
+    user_id: null
+    email_address: per.ougaard@teliasonera.com
+    created_at: '2014-05-14 12:16:54'
+    updated_at: '2014-05-14 12:16:54'
+  response_10:
+    id: '18870'
+    decision_id: '3637'
+    ip_address: 213.150.61.186
+    Role: restored_role
+    user_id: null
+    email_address: kh@danalim.dk
+    created_at: '2014-05-14 12:17:21'
+    updated_at: '2014-05-14 12:17:21'
+  response_11:
+    id: '18871'
+    decision_id: '3637'
+    ip_address: 62.243.4.35
+    Role: restored_role
+    user_id: null
+    email_address: jcm@lsb.dk
+    created_at: '2014-05-14 12:20:19'
+    updated_at: '2014-05-14 12:20:19'
+  response_12:
+    id: '18889'
+    decision_id: '3637'
+    ip_address: 64.254.119.134
+    Role: restored_role
+    user_id: null
+    email_address: salary.dk@taconic.com
+    created_at: '2014-05-14 12:27:45'
+    updated_at: '2014-05-14 12:27:45'
+  response_13:
+    id: '18901'
+    decision_id: '3637'
+    ip_address: 195.7.31.10
+    Role: restored_role
+    user_id: null
+    email_address: tina.damgaard@al-bank.dk
+    created_at: '2014-05-14 12:53:08'
+    updated_at: '2014-05-14 12:53:08'
+  response_14:
+    id: '18902'
+    decision_id: '3637'
+    ip_address: 195.7.30.16
+    Role: restored_role
+    user_id: null
+    email_address: laila.kragelund@al-bank.dk
+    created_at: '2014-05-14 12:53:09'
+    updated_at: '2014-05-14 12:53:09'
+  response_15:
+    id: '18913'
+    decision_id: '3637'
+    ip_address: 134.222.104.250
+    Role: restored_role
+    user_id: null
+    email_address: jeanette.hansen@abbott.com
+    created_at: '2014-05-14 13:02:07'
+    updated_at: '2014-05-14 13:02:07'
+  response_16:
+    id: '18919'
+    decision_id: '3637'
+    ip_address: 194.255.38.202
+    Role: restored_role
+    user_id: null
+    email_address: mabk@q8.dk
+    created_at: '2014-05-14 13:17:13'
+    updated_at: '2014-05-14 13:17:13'
+  response_17:
+    id: '18976'
+    decision_id: '3637'
+    ip_address: 194.50.40.2
+    Role: restored_role
+    user_id: null
+    email_address: bodil.rasmussen@bonnier.dk
+    created_at: '2014-05-15 07:31:25'
+    updated_at: '2014-05-15 07:31:25'
+  response_18:
+    id: '18982'
+    decision_id: '3637'
+    ip_address: 62.243.128.198
+    Role: restored_role
+    user_id: null
+    email_address: pia.stovring@sunchemical.com
+    created_at: '2014-05-15 11:00:57'
+    updated_at: '2014-05-15 11:00:57'
+  response_19:
+    id: '19059'
+    decision_id: '3637'
+    ip_address: 195.41.215.252
+    Role: restored_role
+    user_id: null
+    email_address: rhn@da.dk
+    created_at: '2014-05-20 14:01:00'
+    updated_at: '2014-05-20 14:01:00'
+
+AlternativeMeasurement:
+  measure_0:
+    id: '163342'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_0
+    rating_method: 'forced ranking'
+
+  measure_1:
+    id: '163343'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_0
+    rating_method: 'forced ranking'
+  measure_2:
+    id: '163344'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_0
+    rating_method: 'forced ranking'
+  measure_3:
+    id: '163345'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_0
+    rating_method: 'forced ranking'
+  measure_4:
+    id: '163346'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_0
+    rating_method: 'forced ranking'
+
+  measure_5:
+    id: '163404'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_1
+    rating_method: 'forced ranking'
+  measure_6:
+    id: '163405'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_1
+    rating_method: 'forced ranking'
+  measure_7:
+    id: '163406'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_1
+    rating_method: 'forced ranking'
+  measure_8:
+    id: '163407'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_1
+    rating_method: 'forced ranking'
+  measure_9:
+    id: '163408'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_1
+    rating_method: 'forced ranking'
+
+  measure_10:
+    id: '163490'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_2
+    rating_method: 'forced ranking'
+  measure_11:
+    id: '163491'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_2
+    rating_method: 'forced ranking'
+  measure_12:
+    id: '163492'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_2
+    rating_method: 'forced ranking'
+  measure_13:
+    id: '163493'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_2
+    rating_method: 'forced ranking'
+  measure_14:
+    id: '163494'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_2
+    rating_method: 'forced ranking'
+
+  measure_15:
+    id: '163504'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_3
+    rating_method: 'forced ranking'
+  measure_16:
+    id: '163505'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_3
+    rating_method: 'forced ranking'
+  measure_17:
+    id: '163506'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_3
+    rating_method: 'forced ranking'
+  measure_18:
+    id: '163507'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_3
+    rating_method: 'forced ranking'
+  measure_19:
+    id: '163508'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_3
+    rating_method: 'forced ranking'
+
+  measure_20:
+    id: '163594'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_4
+    rating_method: 'forced ranking'
+  measure_21:
+    id: '163595'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_4
+    rating_method: 'forced ranking'
+  measure_22:
+    id: '163596'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_4
+    rating_method: 'forced ranking'
+  measure_23:
+    id: '163597'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_4
+    rating_method: 'forced ranking'
+  measure_24:
+    id: '163598'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_4
+    rating_method: 'forced ranking'
+
+  measure_25:
+    id: '163636'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_5
+    rating_method: 'forced ranking'
+  measure_26:
+    id: '163637'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_5
+    rating_method: 'forced ranking'
+  measure_27:
+    id: '163638'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_5
+    rating_method: 'forced ranking'
+  measure_28:
+    id: '163639'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_5
+    rating_method: 'forced ranking'
+  measure_29:
+    id: '163640'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_5
+    rating_method: 'forced ranking'
+
+  measure_30:
+    id: '163658'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_6
+    rating_method: 'forced ranking'
+  measure_31:
+    id: '163659'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_6
+    rating_method: 'forced ranking'
+  measure_32:
+    id: '163660'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_6
+    rating_method: 'forced ranking'
+  measure_33:
+    id: '163661'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_6
+    rating_method: 'forced ranking'
+  measure_34:
+    id: '163662'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_6
+    rating_method: 'forced ranking'
+
+  measure_35:
+    id: '164343'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_7
+    rating_method: 'forced ranking'
+  measure_36:
+    id: '164344'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_7
+    rating_method: 'forced ranking'
+  measure_37:
+    id: '164345'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_7
+    rating_method: 'forced ranking'
+  measure_38:
+    id: '164346'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_7
+    rating_method: 'forced ranking'
+  measure_39:
+    id: '164347'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_7
+    rating_method: 'forced ranking'
+
+  measure_40:
+    id: '165131'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_8
+    rating_method: 'forced ranking'
+  measure_41:
+    id: '165132'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_8
+    rating_method: 'forced ranking'
+  measure_42:
+    id: '165133'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_8
+    rating_method: 'forced ranking'
+  measure_43:
+    id: '165134'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_8
+    rating_method: 'forced ranking'
+  measure_44:
+    id: '165135'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_8
+    rating_method: 'forced ranking'
+
+  measure_45:
+    id: '165246'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_9
+    rating_method: 'forced ranking'
+  measure_46:
+    id: '165247'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_9
+    rating_method: 'forced ranking'
+  measure_47:
+    id: '165248'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_9
+    rating_method: 'forced ranking'
+  measure_48:
+    id: '165249'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_9
+    rating_method: 'forced ranking'
+  measure_49:
+    id: '165250'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_9
+    rating_method: 'forced ranking'
+
+  measure_50:
+    id: '165251'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_10
+    rating_method: 'forced ranking'
+  measure_51:
+    id: '165252'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_10
+    rating_method: 'forced ranking'
+  measure_52:
+    id: '165253'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_10
+    rating_method: 'forced ranking'
+  measure_53:
+    id: '165254'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_10
+    rating_method: 'forced ranking'
+  measure_54:
+    id: '165255'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_10
+    rating_method: 'forced ranking'
+
+  measure_55:
+    id: '165256'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_11
+    rating_method: 'forced ranking'
+  measure_56:
+    id: '165257'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_11
+    rating_method: 'forced ranking'
+  measure_57:
+    id: '165258'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_11
+    rating_method: 'forced ranking'
+  measure_58:
+    id: '165259'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_11
+    rating_method: 'forced ranking'
+  measure_59:
+    id: '165260'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_11
+    rating_method: 'forced ranking'
+
+  measure_60:
+    id: '165366'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_12
+    rating_method: 'forced ranking'
+  measure_61:
+    id: '165367'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_12
+    rating_method: 'forced ranking'
+  measure_62:
+    id: '165368'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_12
+    rating_method: 'forced ranking'
+  measure_63:
+    id: '165369'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_12
+    rating_method: 'forced ranking'
+  measure_64:
+    id: '165370'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_12
+    rating_method: 'forced ranking'
+
+  measure_65:
+    id: '165424'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_13
+    rating_method: 'forced ranking'
+  measure_66:
+    id: '165425'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_13
+    rating_method: 'forced ranking'
+  measure_67:
+    id: '165426'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_13
+    rating_method: 'forced ranking'
+  measure_68:
+    id: '165427'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_13
+    rating_method: 'forced ranking'
+  measure_69:
+    id: '165428'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_13
+    rating_method: 'forced ranking'
+
+  measure_70:
+    id: '165429'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_14
+    rating_method: 'forced ranking'
+  measure_71:
+    id: '165430'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_14
+    rating_method: 'forced ranking'
+  measure_72:
+    id: '165431'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_14
+    rating_method: 'forced ranking'
+  measure_73:
+    id: '165432'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_14
+    rating_method: 'forced ranking'
+  measure_74:
+    id: '165433'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_14
+    rating_method: 'forced ranking'
+
+  measure_75:
+    id: '165498'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_15
+    rating_method: 'forced ranking'
+  measure_76:
+    id: '165499'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_15
+    rating_method: 'forced ranking'
+  measure_77:
+    id: '165500'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_15
+    rating_method: 'forced ranking'
+  measure_78:
+    id: '165501'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_15
+    rating_method: 'forced ranking'
+  measure_79:
+    id: '165502'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_15
+    rating_method: 'forced ranking'
+
+  measure_80:
+    id: '165535'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_16
+    rating_method: 'forced ranking'
+  measure_81:
+    id: '165536'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_16
+    rating_method: 'forced ranking'
+  measure_82:
+    id: '165537'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_16
+    rating_method: 'forced ranking'
+  measure_83:
+    id: '165538'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_16
+    rating_method: 'forced ranking'
+  measure_84:
+    id: '165539'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: ''
+    Response: response_16
+    rating_method: 'forced ranking'
+
+  measure_85:
+    id: '165949'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_17
+    rating_method: 'forced ranking'
+  measure_86:
+    id: '165950'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_17
+    rating_method: 'forced ranking'
+  measure_87:
+    id: '165951'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_17
+    rating_method: 'forced ranking'
+  measure_88:
+    id: '165952'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_17
+    rating_method: 'forced ranking'
+  measure_89:
+    id: '165953'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_17
+    rating_method: 'forced ranking'
+
+  measure_90:
+    id: '165986'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_18
+    rating_method: 'forced ranking'
+  measure_91:
+    id: '165987'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_18
+    rating_method: 'forced ranking'
+  measure_92:
+    id: '165988'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_18
+    rating_method: 'forced ranking'
+  measure_93:
+    id: '165989'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_18
+    rating_method: 'forced ranking'
+  measure_94:
+    id: '165990'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_18
+    rating_method: 'forced ranking'
+
+  measure_95:
+    id: '166571'
+    alternative_head_id: '22349'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '1'
+    Response: response_19
+    rating_method: 'forced ranking'
+  measure_96:
+    id: '166572'
+    alternative_head_id: '22350'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '4'
+    Response: response_19
+    rating_method: 'forced ranking'
+  measure_97:
+    id: '166573'
+    alternative_head_id: '22351'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '2'
+    Response: response_19
+    rating_method: 'forced ranking'
+  measure_98:
+    id: '166574'
+    alternative_head_id: '22352'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '3'
+    Response: response_19
+    rating_method: 'forced ranking'
+  measure_99:
+    id: '166575'
+    alternative_head_id: '22353'
+    alternative_tail_id: null
+    criterion_id: '18727'
+    score: '5'
+    Response: response_19
+    rating_method: 'forced ranking'
+
+PlannedAlternativeMeasurement:
+  planned_measurement_0:
+    id: '137497'
+    Role: restored_role
+    criterion_id: '18727'
+    alternative_id: '22349'
+
+  planned_measurement_1:
+    id: '137496'
+    Role: restored_role
+    criterion_id: '18727'
+    alternative_id: '22350'
+
+  planned_measurement_2:
+    id: '137495'
+    Role: restored_role
+    criterion_id: '18727'
+    alternative_id: '22351'
+
+  planned_measurement_3:
+    id: '137494'
+    Role: restored_role
+    criterion_id: '18727'
+    alternative_id: '22352'
+
+  planned_measurement_4:
+    id: '137493'
+    Role: restored_role
+    criterion_id: '18727'
+    alternative_id: '22353'

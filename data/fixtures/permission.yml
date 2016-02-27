@@ -1,0 +1,4 @@
+sfGuardPermission:
+  Permission_decision_management:
+    name:           decision_management
+    description:    Decision management

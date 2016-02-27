@@ -1,0 +1,37 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:
+    - /libs/ladda/ladda.min.css?v=0.9.7
+    - /libs/bootstrap/css/bootstrap.min.css?v=3.3.2
+    - /libs/bootstrap-tagsinput/bootstrap-tagsinput.css?v=0.4.2
+    - dist/backend.css?v=13
+    - /libs/font-awesome/css/font-awesome.min.css?v=4.2.0
+    - /libs/animate/animate.min.css?v=3.1.0
+    - /libs/pickadate/themes/default.css?v=3.5.3
+    - /libs/pickadate/themes/default.date.css?v=3.5.3
+
+  javascripts:
+    - /libs/jquery/jquery-2.1.1.min.js
+    - /libs/jquery-autosave/jquery.autosave.js?v=1.0
+    - /libs/bootstrap/js/bootstrap.min.js?v=3.3.2
+    - /libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js?v=0.4.2
+    - /libs/pickadate/picker.js?v=3.5.3
+    - /libs/pickadate/picker.date.js?v=3.5.3
+    - application.js?v=2
+    - google_analytics.js
+    - { '//html5shim.googlecode.com/svn/trunk/html5.js': { condition: lt IE 9 } }
+
+  has_layout:     true
+  layout:         layout

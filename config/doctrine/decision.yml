@@ -1,0 +1,205 @@
+TypeTemplate:
+  options:
+    symfony:
+      filter: false
+  columns:
+    name: string(255)
+    type_id:
+      type: integer
+      notnull: true
+    alternative_alias: string(255)
+    alternative_plural_alias: string(255)
+    partitioner_alias: string(64)
+    user_id: integer
+  relations:
+    Type:
+      local: type_id
+      foreign: id
+      class: DecisionType
+      onDelete: CASCADE
+    User:
+      local: user_id
+      foreign: id
+      class: sfGuardUser
+      onDelete: CASCADE
+
+RoleTemplate:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    name: string(255)
+    template_id:
+      type: integer
+      notnull: true
+  relations:
+    Template:
+      local: template_id
+      foreign: id
+      class: TypeTemplate
+      onDelete: CASCADE
+
+CriteriaTemplate:
+  options:
+    symfony:
+      filter: false
+  columns:
+    name: string(255)
+    template_id:
+      type: integer
+      notnull: true
+    measurement:
+      type: enum
+      values: ['direct rating', 'direct float', 'forced ranking', 'five point scale', 'ten point scale']
+      default: 'five point scale'
+    variable_type:
+      type: enum
+      values: ['Benefit', 'Cost', 'Info']
+      default: Benefit
+  relations:
+    Template:
+      local: template_id
+      foreign: id
+      class: TypeTemplate
+      onDelete: CASCADE
+
+UserDecisionType:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    user_id: integer
+    type_id: integer
+  indexes:
+    role_criterion_alternative_idx:
+      fields: [user_id, type_id]
+      type: unique
+  relations:
+    Type:
+      local: type_id
+      foreign: id
+      class: DecisionType
+      onDelete: CASCADE
+    User:
+      local: user_id
+      foreign: id
+      class: sfGuardUser
+      onDelete: CASCADE
+
+DecisionType:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    name: string(255)
+    description: string
+  relations:
+    Users:
+      class: sfGuardUser
+      local: type_id
+      foreign: user_id
+      refClass: UserDecisionType
+      foreignAlias: Types
+
+Decision:
+  options:
+    symfony:
+      filter: false
+  columns:
+    user_id: integer
+    name: string(255)
+    objective: string
+    type_id:
+      type: integer
+      notnull: true
+      default: 1
+    template_id:
+      type: integer
+      notnull: true
+    folder_id: integer
+    assigned_to: integer
+    start_date: datetime
+    end_date: datetime
+    color:
+      type: string(8)
+      default: #CCCCCC
+    status:
+      type: enum
+      values: [Planned, In Progress, Done]
+      default: Planned
+    external_id:
+      type: string(50)
+    save_graph_weight:
+      type: boolean
+      default: 0
+  actAs:
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: root_id
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      foreignAlias: Decisions
+      class: sfGuardUser
+      onDelete: CASCADE
+    Type:
+      local: type_id
+      foreign: id
+      class: DecisionType
+      onDelete: CASCADE
+    Template:
+      local: template_id
+      foreign: id
+      class: TypeTemplate
+      onDelete: CASCADE
+    Folder:
+      local: folder_id
+      foreign: id
+      class: Folder
+      foreignAlias: Decisions
+      onDelete: CASCADE
+    AssignedTo:
+      local: assigned_to
+      foreign: id
+      foreignAlias: Decisions
+      class: sfGuardUser
+      onDelete: CASCADE
+
+Folder:
+  options:
+    symfony:
+      filter: false
+      form: true
+  columns:
+    name: string(255)
+    user_id: integer
+    deletable:
+      type: boolean
+      default: true
+    type:
+      type: enum
+      values: ['project', 'roadmap']
+      default: project
+    open:
+      type: boolean
+      default: 1
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      foreignAlias: DecisionGroups
+      class: sfGuardUser
+      onDelete: CASCADE

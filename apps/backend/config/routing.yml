@@ -1,0 +1,1053 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: decision, action: index }
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+# Decision routes
+
+decision:
+  url:     
+  class:   sfRequestRoute
+  param:   { module: decision, action: index }
+  requirements:
+    sf_method: [get]
+
+decision\new:
+  url:     /new
+  class:   sfRequestRoute
+  param:   { module: decision, action: new }
+  requirements:
+    sf_method: [get]
+
+decision\create:
+  url:     /create
+  class:   sfRequestRoute
+  param:   { module: decision, action: create }
+  requirements:
+    sf_method: [post]
+
+decision\skip:
+  url:     /skip
+  class:   sfRequestRoute
+  param:   { module: decision, action: skip }
+  requirements:
+    sf_method: [get]
+
+decision\delete:
+  url:     /delete
+  class:   sfRequestRoute
+  param:   { module: decision, action: delete }
+  requirements:
+    sf_method: [post]
+
+decision\update:
+  url:     /:id/update
+  class:   sfRequestRoute
+  param:   { module: decision, action: update }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+decision\edit:
+  url:     /:id/edit
+  class:   sfRequestRoute
+  param:   { module: decision, action: edit }
+  requirements:
+    sf_method: [get]
+
+decision\fetch:
+  url:     /:id/fetch
+  class:   sfRequestRoute
+  param:   { module: decision, action: fetch }
+  requirements:
+    sf_method: [get]
+
+decision\newFolder:
+  url:     /folder/new
+  class:   sfRequestRoute
+  param:   { module: decision, action: newFolder }
+  requirements:
+    sf_method: [get]
+
+decision\addToFolder:
+  url:     /folder/add
+  class:   sfRequestRoute
+  param:   { module: decision, action: addToFolder }
+  requirements:
+    sf_method: [post]
+
+decision\editFolder:
+  url:     /folder/:id/edit
+  class:   sfDoctrineRoute
+  options: { model: Folder, type: object }
+  param:   { module: decision, action: editFolder }
+  requirements:
+    sf_method: [get]
+
+decision\updateFolder:
+  url:     /folder/:id/update
+  class:   sfRequestRoute
+  param:   { module: decision, action: updateFolder }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+decision\updateFolderState:
+  url:     /folder/:id/update-state/*
+  class:   sfRequestRoute
+  param:   { module: decision, action: updateFolderState }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+decision\deleteFolder:
+  url:     /folder/delete
+  class:   sfRequestRoute
+  param:   { module: decision, action: deleteFolder }
+  requirements:
+    sf_method: [post]
+
+decision\upload:
+  url:     /:id/upload
+  class:   sfDoctrineRoute
+  options: { model: Decision, type: object }
+  param:   { module: decision, action: upload }
+  requirements:
+    sf_method: [post]
+
+decision\demo:
+  url:     /demo
+  class:   sfRequestRoute
+  param:   { module: decision, action: demo }
+  requirements:
+    sf_method: [get]
+
+decision\import:
+  url:     /decision/items/import
+  class:   sfRequestRoute
+  param:   { module: decision, action: modalUpload }
+  requirements:
+    sf_method: [post]
+
+decision\search:
+  url:    /search
+  class:  sfRequestRoute
+  param:  { module: decision, action: items }
+  requirements:
+    sf_method: [get, post]
+
+decision\importFromTrello:
+  url:    /import_from_trello
+  class:  sfRequestRoute
+  param:  { module: decision, action: importFromTrello }
+  requirements:
+    sf_method: [post]
+
+decision\portfolio:
+  url:     /portfolio
+  class:   sfRequestRoute
+  param:   { module: decision, action: portfolio }
+  requirements:
+    sf_method: [get]
+
+decision\personas:
+  url:     /personas
+  class:   sfRequestRoute
+  param:   { module: decision, action: personas }
+  requirements:
+    sf_method: [get]
+
+decision\strategy:
+  url:     /strategy
+  class:   sfRequestRoute
+  param:   { module: decision, action: strategy }
+  requirements:
+    sf_method: [get]
+# Criterion routes
+
+criterion:
+  url:     /:decision_id/criterion
+  class:   sfRequestRoute
+  param:   { module: criterion, action: index }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+criterion\new:
+  url:     /:decision_id/criterion/new
+  class:   sfRequestRoute
+  param:   { module: criterion, action: new }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+criterion\create:
+  url:     /criterion/:decision_id/create
+  class:   sfRequestRoute
+  param:   { module: criterion, action: create }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+criterion\move:
+  url:     /criterion/move
+  class:   sfRequestRoute
+  param:   { module: criterion, action: move }
+  requirements:
+    sf_method: [post]
+
+criterion\delete:
+  url:     /criterion/delete
+  class:   sfRequestRoute
+  param:   { module: criterion, action: delete }
+  requirements:
+    sf_method: [post]
+
+criterion\update:
+  url:     /criterion/:id/update
+  class:   sfRequestRoute
+  param:   { module: criterion, action: update }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+criterion\edit:
+  url:     /criterion/:id/edit
+  class:   sfRequestRoute
+  param:   { module: criterion, action: edit }
+  requirements:
+    sf_method: [get]
+
+criterion\fetch:
+  url:     /criterion/:id/fetch
+  class:   sfRequestRoute
+  param:   { module: criterion, action: fetch }
+  requirements:
+    sf_method: [get]
+
+criterion\createPopular:
+  url:     /:decision_id/criterion/popular/:id/create
+  class:   sfDoctrineRoute
+  options: { model: PopularCriterion, type: object }
+  param:   { module: criterion, action: createPopular }
+  requirements:
+    sf_method: [get]
+
+criterion\import:
+  url:     /:decision_id/criterion/import
+  class:   sfRequestRoute
+  param:   { module: criterion, action: import }
+  requirements:
+    sf_method: [post]
+
+# Alternative routes
+    
+alternative:
+  url:     /:decision_id/alternative
+  class:   sfRequestRoute
+  param:   { module: alternative, action: index }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+alternative\new:
+  url:     /:decision_id/alternative/new
+  class:   sfRequestRoute
+  param:   { module: alternative, action: new }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+alternative\delete:
+  url:     /alternative/delete
+  class:   sfRequestRoute
+  param:   { module: alternative, action: delete }
+  requirements:
+    sf_method: [post]
+
+alternative\update:
+  url:     /alternative/:id/update
+  class:   sfRequestRoute
+  param:   { module: alternative, action: update }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+alternative\create:
+  url:     /alternative/:decision_id/create
+  class:   sfRequestRoute
+  param:   { module: alternative, action: create }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+alternative\edit:
+  url:     /alternative/:id/edit
+  class:   sfRequestRoute
+  param:   { module: alternative, action: edit }
+  requirements:
+    sf_method: [get]
+
+alternative\fetch:
+  url:     /alternative/:id/fetch
+  class:   sfRequestRoute
+  param:   { module: alternative, action: fetch }
+  requirements:
+    sf_method: [get]
+
+alternative\bulkDelete:
+  url:     /alternative/bulk/delete
+  class:   sfRequestRoute
+  param:   { module: alternative, action: bulkDelete }
+  requirements:
+    sf_method: [post]
+
+alternative\bulkMove:
+  url:     /alternative/bulk/move
+  class:   sfRequestRoute
+  param:   { module: alternative, action: bulkMove }
+  requirements:
+    sf_method: [post]
+
+alternative\bulkCopy:
+  url:     /alternative/bulk/copy
+  class:   sfRequestRoute
+  param:   { module: alternative, action: bulkCopy }
+  requirements:
+    sf_method: [post]
+
+alternative\import:
+  url:     /:decision_id/alternative/import
+  class:   sfRequestRoute
+  param:   { module: alternative, action: import }
+  requirements:
+    sf_method: [post]
+
+alternative\upload:
+  url:     /alternative/:id/upload
+  class:   sfDoctrineRoute
+  options: { model: Alternative, type: object }
+  param:   { module: alternative, action: upload }
+  requirements:
+    sf_method: [post, get]
+
+alternative\addLink:
+  url:     /alternative/:id/link/add
+  class:   sfDoctrineRoute
+  options: { model: Alternative, type: object }
+  param:   { module: alternative, action: addLink }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+alternative\removeLink:
+  url:     /alternative/link/remove
+  class:   sfRequestRoute
+  param:   { module: alternative, action: removeLink }
+  requirements:
+    sf_method: [post]
+
+alternative\excelExport:
+  url:     /alternative/:decision_id/export
+  class:   sfRequestRoute
+  param:   { module: alternative, action: excelExport }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+# Collaborate routes
+    
+role:
+  url:     /:decision_id/role
+  class:   sfRequestRoute
+  param:   { module: role, action: index }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+role\new:
+  url:     /:decision_id/role/new
+  class:   sfRequestRoute
+  param:   { module: role, action: new }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+role\create:
+  url:     /role/:decision_id/create
+  class:   sfRequestRoute
+  param:   { module: role, action: create }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+role\delete:
+  url:     /role/delete
+  class:   sfRequestRoute
+  param:   { module: role, action: delete }
+  requirements:
+    sf_method: [post]
+
+role\update:
+  url:     /role/:id/update
+  class:   sfRequestRoute
+  param:   { module: role, action: update }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+role\edit:
+  url:     /role/:id/edit
+  class:   sfRequestRoute
+  param:   { module: role, action: edit }
+  requirements:
+    sf_method: [get]
+
+role\fetch:
+  url:     /role/:id/fetch
+  class:   sfRequestRoute
+  param:   { module: role, action: fetch }
+  requirements:
+    sf_method: [get]
+
+role\upload:
+  url:     /role/:id/upload
+  class:   sfDoctrineRoute
+  options: { model: Role, type: object }
+  param:   { module: role, action: upload }
+  requirements:
+    sf_method: [post, get]
+
+role\rateYourself:
+  url:     /:decision_id/role/rate-yourself
+  class:   sfRequestRoute
+  param:   { module: role, action: rateYourself }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+role\hireExperts:
+  url:     /role/:id/hire/experts
+  class:   sfDoctrineRoute
+  options: { model: Role, type: object }
+  param:   { module: role, action: hireExperts }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+# Analyze routes
+
+analyze:
+  url:     /:decision_id/analyze
+  class:   sfRequestRoute
+  param:   { module: analyze, action: index }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+analyze\update:
+  url:     /analyze/:decision_id/update
+  class:   sfRequestRoute
+  param:   { module: analyze, action: update }
+  requirements:
+    sf_method: [post]
+
+analyze\save_criteria_weight_state:
+  url:     /analyze/:decision_id/save-criteria-weight
+  class:   sfRequestRoute
+  param:   { module: analyze, action: saveCriteriaWeightState }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+    state: \d+
+
+analyze\revert:
+  url:     /analyze/:decision_id/revert
+  class:   sfRequestRoute
+  param:   { module: analyze, action: revert }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+analyze\excelExport:
+  url:     /analyze/:decision_id/export
+  class:   sfRequestRoute
+  param:   { module: analyze, action: excelExport }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+analyze\pinToWall:
+  url:     /analyze/:decision_id/pin-to-wall/:type
+  class:   sfRequestRoute
+  param:   { module: analyze, action: pinToWall }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+    type: (?:criteria|alternatives|cost|xy|bubble|partition|cumulative|radar)
+
+analyze\activePinToWall:
+  url:     /analyze/:decision_id/active-pin-to-wall/:type
+  class:   sfRequestRoute
+  param:   { module: analyze, action: activePinToWall }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+    type: (?:criteria|alternatives|cost|xy|bubble|partition|cumulative|radar)
+
+analyze\generateImage:
+  url:     /analyze/:decision_id/generate-image/:type
+  class:   sfRequestRoute
+  param:   { module: analyze, action: generateImage }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+    type: (?:criteria|alternatives|cost|xy|bubble|partition|cumulative|radar)
+
+analyze\newRelease:
+  url:     /analyze/:decision_id/release/new
+  class:   sfRequestRoute
+  param:   { module: analyze, action: newRelease }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+analyze\addReleaseItem:
+  url:     /analyze/:decision_id/release/add/item
+  class:   sfRequestRoute
+  param:   { module: analyze, action: addReleaseItem }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+analyze\removeReleaseItem:
+  url:     /analyze/release/item/remove
+  class:   sfRequestRoute
+  param:   { module: analyze, action: removeReleaseItem }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+analyze\updateRelease:
+  url:     /analyze/:decision_id/release/update
+  class:   sfRequestRoute
+  param:   { module: analyze, action: updateRelease }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+analyze\deleteRelease:
+  url:     /analyze/release/delete
+  class:   sfDoctrineRoute
+  options: { model: ProjectRelease, type: object }
+  param:   { module: analyze, action: deleteRelease }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+analyze\newLogicalFilter:
+  url:     /analyze/:decision_id/filter/logical/new
+  class:   sfRequestRoute
+  param:   { module: analyze, action: newLogicalFilter }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+analyze\deleteLogicalFilter:
+  url:     /analyze/:decision_id/filter/logical/delete
+  class:   sfRequestRoute
+  param:   { module: analyze, action: deleteLogicalFilter }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+analyze\updateRoleFilter:
+  url:     /analyze/:decision_id/filter/role/update
+  class:   sfRequestRoute
+  param:   { module: analyze, action: updateRoleFilter }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+analyze\updateStatusFilter:
+  url:     /analyze/:decision_id/filter/status/update
+  class:   sfRequestRoute
+  param:   { module: analyze, action: updateStatusFilter }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+analyze\updateTagFilter:
+  url:     /analyze/:decision_id/filter/tag/update
+  class:   sfRequestRoute
+  param:   { module: analyze, action: updateTagFilter }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+analyze\export:
+  url:     /:decision_id/analyze/export
+  class:   sfRequestRoute
+  param:   { module: analyze, action: export }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+analyze\collapse:
+  url:     /:decision_id/analyze/collapse
+  class:   sfRequestRoute
+  param:   { module: analyze, action: collapse }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+analyze\logPinToWall:
+  url:     /analyze/log-pin-to-wall
+  class:   sfRequestRoute
+  param:   { module: analyze, action: logPinToWall }
+  requirements:
+    sf_method: [post]
+
+# Wall routes
+
+wall:
+  url:     /:decision_id/wall
+  class:   sfRequestRoute
+  param:   { module: wall, action: index }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+wall\saveComment:
+  url:     /wall/save/comment
+  class:   sfRequestRoute
+  options: { model: WallPost, type: object }
+  param:   { module: wall, action: saveComment }
+  requirements:
+    sf_method: [post]
+
+wall\deletePost:
+  url:     /wall/post/delete
+  class:   sfRequestRoute
+  param:   { module: wall, action: deletePost }
+  requirements:
+    sf_method: [post]
+
+wall\export:
+  url:     /:decision_id/wall/export
+  class:   sfRequestRoute
+  param:   { module: wall, action: export }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+planner:
+  url:     /:decision_id/planner
+  class:   sfRequestRoute
+  param:   { module: analyze, action: planner }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+planner2:
+  url:     /:decision_id/planner2
+  class:   sfRequestRoute
+  param:   { module: planner, action: index }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+planner2\logPinToWall:
+  url:     /planner2/log-pin-to-wall
+  class:   sfRequestRoute
+  param:   { module: planner, action: logPinToWall }
+  requirements:
+    sf_method: [post]
+
+planner2\removeReleaseItem:
+  url:     /planner2/release/item/remove
+  class:   sfRequestRoute
+  param:   { module: planner, action: removeReleaseItem }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+planner2\addReleaseItem:
+  url:     /planner2/:decision_id/release/add/item
+  class:   sfRequestRoute
+  param:   { module: planner, action: addReleaseItem }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+planner2\newRelease:
+  url:     /:decision_id/planner2/new-release
+  class:   sfRequestRoute
+  param:   { module: planner, action: newRelease }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+planner2\createRelease:
+  url:     /planner2/:decision_id/create-release
+  class:   sfRequestRoute
+  param:   { module: planner, action: createRelease }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+planner2\editRelease:
+  url:     /planner2/:id/edit-release
+  class:   sfRequestRoute
+  param:   { module: planner, action: edit }
+  requirements:
+    sf_method: [get]
+
+planner2\updateRelease:
+  url:     /planner2/:id/update-release
+  class:   sfRequestRoute
+  param:   { module: planner, action: updateRelease }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+planner2\deleteRelease:
+  url:     /planner2/release/delete
+  class:   sfDoctrineRoute
+  options: { model: ProjectRelease, type: object }
+  param:   { module: planner, action: delete }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+# Uploaded file routes
+
+uploaded_file\download:
+  url:     /file/:id/download
+  class:   sfDoctrineRoute
+  options: { model: UploadedFile, type: object }
+  param:   { module: uploaded_file, action: download }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+uploaded_file\delete:
+  url:     /file/:id/delete
+  class:   sfDoctrineRoute
+  options: { model: UploadedFile, type: object }
+  param:   { module: uploaded_file, action: delete }
+  requirements:
+    sf_method: [delete]
+    id: \d+
+
+# Responses routes
+
+response:
+  url:     /:decision_id/response
+  class:   sfRequestRoute
+  param:   { module: response, action: index }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+response\export:
+  url:     /:decision_id/response/export
+  class:   sfRequestRoute
+  param:   { module: response, action: export }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+response\delete:
+  url:     /response/delete
+  class:   sfRequestRoute
+  param:   { module: response, action: delete }
+  requirements:
+    sf_method: [delete]
+    id: \d+
+
+sf_guard_register\confirmation:
+  url:     /register/confirmation/:token
+  class:   sfRequestRoute
+  param:   { module: sfGuardRegister, action: confirmation }
+  requirements:
+    sf_method: [get]
+
+# Dashboard
+dashboard:
+  url:     /:decision_id/dashboard
+  class:   sfRequestRoute
+  param:   { module: dashboard, action: index }
+  requirements:
+    sf_method: [get]
+    decision_id: \d+
+
+dashboard\save:
+  url:     /:decision_id/dashboard/save
+  class:   sfRequestRoute
+  param:   { module: dashboard, action: save }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+dashboard\createPopular:
+  url:     /:decision_id/criterion/popular/:id/create
+  class:   sfDoctrineRoute
+  options: { model: PopularCriterion, type: object }
+  param:   { module: dashboard, action: createPopular }
+  requirements:
+    sf_method: [post]
+
+dashboard\importFromTrello:
+  url:     /:decision_id/dashboard/import_from_trello
+  class:   sfRequestRoute
+  param:   { module: dashboard, action: importFromTrello }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+dashboard\importFromExcel:
+  url:     /:decision_id/dashboard/import_from_excel
+  class:   sfRequestRoute
+  param:   { module: dashboard, action: importFromExcel }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+dashboard\importFromCustomFields:
+  url:     /:decision_id/dashboard/import_from_custom_fields
+  class:   sfRequestRoute
+  param:   { module: dashboard, action: importFromCustomFields }
+  requirements:
+    sf_method: [post]
+    decision_id: \d+
+
+wizard:
+  url:     /wizard
+  class:   sfRequestRoute
+  param:   { module: wizard, action: index }
+  requirements:
+    sf_method: [get]
+
+wizard\decisionModalSave:
+  url:     /wizard/project/modal/save
+  class:   sfRequestRoute
+  param:   { module: wizard, action: decisionModalSave }
+  requirements:
+    sf_method: [post]
+
+wizard\decisionSave:
+  url:     /wizard/project/save
+  class:   sfRequestRoute
+  param:   { module: wizard, action: decisionSave }
+  requirements:
+    sf_method: [post]
+
+wizard\alternatives:
+  url:     /wizard/:decision_id/items
+  class:   sfRequestRoute
+  param:   { module: wizard, action: alternatives }
+  requirements:
+    sf_method: [get]
+
+wizard\alternativeImport:
+  url:     /wizard/:decision_id/alternative/import
+  class:   sfRequestRoute
+  param:   { module: wizard, action: alternativeImport }
+  requirements:
+    sf_method: [post]
+
+wizard\alternativeSave:
+  url:     /wizard/:decision_id/item/save
+  class:   sfRequestRoute
+  param:   { module: wizard, action: alternativeSave }
+  requirements:
+    sf_method: [post]
+
+wizard\alternativeModalSave:
+  url:     /wizard/item/save
+  class:   sfRequestRoute
+  param:   { module: wizard, action: alternativeModalSave }
+  requirements:
+    sf_method: [post]
+
+wizard\skip:
+  url:     /wizard/skip
+  class:   sfRequestRoute
+  param:   { module: wizard, action: skip }
+  requirements:
+    sf_method: [get]
+
+wizard\finish:
+  url:     /wizard/finish
+  class:   sfRequestRoute
+  param:   { module: wizard, action: finish }
+  requirements:
+    sf_method: [get]
+
+tag:
+  url:     /tag
+  class:   sfRequestRoute
+  param:   { module: tag, action: index }
+  requirements:
+    sf_method: [get]
+
+tag\update:
+  url:     /tag/:id/update
+  class:   sfRequestRoute
+  param:   { module: tag, action: update }
+  requirements:
+    sf_method: [put]
+    id: \d+
+
+tag\edit:
+  url:     /tag/edit/:id
+  class:   sfRequestRoute
+  param:   { module: tag, action: edit }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+tag\delete:
+  url:     /tag/:id/delete
+  class:   sfRequestRoute
+  param:   { module: tag, action: delete }
+  requirements:
+    sf_method: [delete]
+    id: \d+
+
+tag\new:
+  url:     /tag/new
+  class:   sfRequestRoute
+  param:   { module: tag, action: new }
+  requirements:
+    sf_method: [get]
+
+tag\create:
+  url:     /tag/create
+  class:   sfRequestRoute
+  param:   { module: tag, action: create }
+  requirements:
+    sf_method: [post]
+
+roadmap:
+  url:     /roadmap
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: index }
+  requirements:
+    sf_method: [get]
+
+roadmap\newFolder:
+  url:     /roadmap/folder/new
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: newFolder }
+  requirements:
+    sf_method: [get]
+
+roadmap\deleteFolder:
+  url:     /roadmap/folder/delete
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: deleteFolder }
+  requirements:
+    sf_method: [post]
+
+roadmap\editFolder:
+  url:     /roadmap/folder/:id/edit
+  class:   sfDoctrineRoute
+  options: { model: Folder, type: object }
+  param:   { module: roadmap, action: editFolder }
+  requirements:
+    sf_method: [get]
+
+roadmap\updateFolder:
+  url:     /roadmap/folder/:id/update
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: updateFolder }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+roadmap\addToFolder:
+  url:     /roadmap/folder/add
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: addToFolder }
+  requirements:
+    sf_method: [post]
+
+roadmap\new:
+  url:     /roadmap/alternative/new
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: new }
+  requirements:
+    sf_method: [get]
+
+roadmap\fetch:
+  url:     /roadmap/:id/fetch
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: fetch }
+  requirements:
+    sf_method: [get]
+
+roadmap\create:
+  url:     /roadmap/create
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: create }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+roadmap\edit:
+  url:     /roadmap/:id/edit
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: edit }
+  requirements:
+    sf_method: [get]
+
+roadmap\delete:
+  url:     /roadmap/delete
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: delete }
+  requirements:
+    sf_method: [post]
+
+roadmap\update:
+  url:     /roadmap/:id/update
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: update }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+roadmap\dashboard:
+  url:     /roadmap/:id/dashboard
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: dashboard }
+  requirements:
+    sf_method: [get]
+
+roadmap\timeline:
+  url:     /roadmap/:id/timeline
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: timeline }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+roadmap\export:
+  url:     /roadmap/:id/export
+  class:   sfRequestRoute
+  param:   { module: roadmap, action: export }
+  requirements:
+    sf_method: [get]
+    id: \d+

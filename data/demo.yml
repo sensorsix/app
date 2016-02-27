@@ -1,0 +1,314 @@
+decision_1:
+  name: Demo - Product development
+  objective: To build an iPhone app that makes it easier for the mobile customer to shop with Atheletic Apparel Inc.
+  type_id: 2
+  Alternative:
+    alternative_1:
+      name: Map
+      additional_info: The map can locate the nearest store
+    alternative_2:
+      name: Facebook log in
+      additional_info: Log in with the customers facebook account
+    alternative_3:
+      name: Twitter log in
+      additional_info: The ability to log in with the customers twitter account
+    alternative_4:
+      name: Google+ log in
+      additional_info: The ability to log in with a google account
+    alternative_5:
+      name: Regular log in
+      additional_info: The ability to log in with an email address
+    alternative_6:
+      name: Most popular products
+      additional_info: A list of the most popular products in our shop
+    alternative_7:
+      name: Shop
+      additional_info: In the shop you can order all goods from our webshop and have them delivered or pick up at nearest store
+    alternative_8:
+      name: Wishlist
+      additional_info: Any product from the shop can be added to the wishlist and the wishlist can be shared with friends through email or on facebook.
+    alternative_9:
+      name: Like product
+      additional_info: The ability to like a product on facebook
+    alternative_10:
+      name: Personal recommendation
+      additional_info: Based on the customers viewing and purchase history the most recommended products will be shown
+    alternative_11:
+      name: Browse products by category
+      additional_info: locate products by selecting categories
+    alternative_12:
+      name: Search product
+      additional_info: The ability to find a product in the shop based on search queries.
+  Criterion:
+    criterion_1:
+      name: Social features
+      description: How well the product feature allows the customer to integrate our products with his or her social circles
+      measurement: five point scale
+      variable_type: Benefit
+    criterion_2:
+      name: Customer utility
+      description: How useful the feature is to customers
+      measurement: five point scale
+      variable_type: Benefit
+    criterion_3:
+      name: Feasibility
+      description: How difficult is it technically to develop this feature? 5 is very easy and 1 is very difficult.
+      measurement: five point scale
+      variable_type: Benefit
+    criterion_4:
+      name: Uniqueness
+      description: How unique is this feature in the market?
+      measurement: five point scale
+      variable_type: Benefit
+    criterion_5:
+      name: Hour estimate
+      description: How many hours will it take to develop the feature
+      measurement: direct rating
+      variable_type: Cost
+  Roles:
+    role_1:
+      name: Developer
+      prioritize: 0
+      PlannedAlternativeMeasurement:
+      <?php for ($i = 1; $i <= 12; $i++) : ?>
+  <?php echo $i ?>: [criterion_5, alternative_<?php echo $i ?>]<?php echo "\n" ?>
+      <?php endfor ?>
+
+      Response:
+        response_1:
+          email_address: demo
+          ip_address: 127.0.0.1
+          AlternativeMeasurement:
+            1: [criterion_5, alternative_1, direct rating, 375]
+            2: [criterion_5, alternative_2, direct rating, 20]
+            3: [criterion_5, alternative_3, direct rating, 25]
+            4: [criterion_5, alternative_4, direct rating, 30]
+            5: [criterion_5, alternative_5, direct rating, 10]
+            6: [criterion_5, alternative_6, direct rating, 40]
+            7: [criterion_5, alternative_7, direct rating, 300]
+            8: [criterion_5, alternative_8, direct rating, 250]
+            9: [criterion_5, alternative_9, direct rating, 35]
+            10: [criterion_5, alternative_10, direct rating, 520]
+            11: [criterion_5, alternative_11, direct rating, 25]
+            12: [criterion_5, alternative_12, direct rating, 100]
+
+    role_2:
+      name: Manager
+      prioritize: 1
+      prioritization_method: 'ten point scale'
+      Response:
+        response_1:
+          email_address: demo
+          ip_address: 127.0.0.1
+          CriterionPrioritization:
+            1: [criterion_1, '', ten point scale, 4]
+            2: [criterion_2, '', ten point scale, 9]
+            3: [criterion_3, '', ten point scale, 7]
+            4: [criterion_4, '', ten point scale, 5]
+        response_2:
+          email_address: demo
+          ip_address: 127.0.0.1
+          CriterionPrioritization:
+            1: [criterion_1, '', ten point scale, 4]
+            2: [criterion_2, '', ten point scale, 9]
+            3: [criterion_3, '', ten point scale, 8]
+            4: [criterion_4, '', ten point scale, 3]
+
+    role_3:
+      name: Business analyst
+      prioritize: 0
+      PlannedAlternativeMeasurement:
+      <?php for ($i = 1; $i <= 12; $i++) : ?>
+  <?php echo $i ?>: [criterion_4, alternative_<?php echo $i ?>]
+        2<?php echo $i ?>: [criterion_3, alternative_<?php echo $i ?>]
+        3<?php echo $i ?>: [criterion_1, alternative_<?php echo $i ?>]<?php echo "\n" ?>
+      <?php endfor ?>
+
+      Response:
+        response_1:
+          email_address: demo
+          ip_address: 127.0.0.1
+          AlternativeMeasurement:
+            1: [criterion_1, alternative_1, five point scale, 1]
+            2: [criterion_1, alternative_2, five point scale, 4]
+            3: [criterion_1, alternative_3, five point scale, 1]
+            4: [criterion_1, alternative_4, five point scale, 3]
+            5: [criterion_1, alternative_5, five point scale, 1]
+            6: [criterion_1, alternative_6, five point scale, 2]
+            7: [criterion_1, alternative_7, five point scale, 1]
+            8: [criterion_1, alternative_8, five point scale, 5]
+            9: [criterion_1, alternative_9, five point scale, 5]
+            10: [criterion_1, alternative_10, five point scale, 3]
+            11: [criterion_1, alternative_11, five point scale, 1]
+            12: [criterion_1, alternative_12, five point scale, 1]
+            13: [criterion_3, alternative_1, five point scale, 2]
+            14: [criterion_3, alternative_2, five point scale, 3]
+            15: [criterion_3, alternative_3, five point scale, 3]
+            16: [criterion_3, alternative_4, five point scale, 3]
+            17: [criterion_3, alternative_5, five point scale, 5]
+            18: [criterion_3, alternative_6, five point scale, 5]
+            19: [criterion_3, alternative_7, five point scale, 3]
+            20: [criterion_3, alternative_8, five point scale, 2]
+            21: [criterion_3, alternative_9, five point scale, 5]
+            22: [criterion_3, alternative_10, five point scale, 1]
+            23: [criterion_3, alternative_11, five point scale, 5]
+            24: [criterion_3, alternative_12, five point scale, 4]
+            25: [criterion_4, alternative_1, five point scale, 3]
+            26: [criterion_4, alternative_2, five point scale, 3]
+            27: [criterion_4, alternative_3, five point scale, 4]
+            28: [criterion_4, alternative_4, five point scale, 5]
+            29: [criterion_4, alternative_5, five point scale, 1]
+            30: [criterion_4, alternative_6, five point scale, 1]
+            31: [criterion_4, alternative_7, five point scale, 3]
+            32: [criterion_4, alternative_8, five point scale, 5]
+            33: [criterion_4, alternative_9, five point scale, 2]
+            34: [criterion_4, alternative_10, five point scale, 3]
+            35: [criterion_4, alternative_11, five point scale, 1]
+            36: [criterion_4, alternative_12, five point scale, 1]
+
+        response_2:
+          email_address: demo
+          ip_address: 127.0.0.1
+          AlternativeMeasurement:
+            2: [criterion_1, alternative_2, five point scale, 3]
+            3: [criterion_1, alternative_3, five point scale, 3]
+            4: [criterion_1, alternative_4, five point scale, 2]
+            6: [criterion_1, alternative_6, five point scale, 3]
+            7: [criterion_1, alternative_7, five point scale, 1]
+            8: [criterion_1, alternative_8, five point scale, 5]
+            9: [criterion_1, alternative_9, five point scale, 4]
+            10: [criterion_1, alternative_10, five point scale, 3]
+            11: [criterion_1, alternative_11, five point scale, 1]
+            12: [criterion_1, alternative_12, five point scale, 2]
+            13: [criterion_3, alternative_1, five point scale, 2]
+            14: [criterion_3, alternative_2, five point scale, 4]
+            15: [criterion_3, alternative_3, five point scale, 4]
+            16: [criterion_3, alternative_4, five point scale, 4]
+            17: [criterion_3, alternative_5, five point scale, 5]
+            18: [criterion_3, alternative_6, five point scale, 4]
+            19: [criterion_3, alternative_7, five point scale, 2]
+            20: [criterion_3, alternative_8, five point scale, 2]
+            21: [criterion_3, alternative_9, five point scale, 4]
+            22: [criterion_3, alternative_10, five point scale, 1]
+            23: [criterion_3, alternative_11, five point scale, 4]
+            24: [criterion_3, alternative_12, five point scale, 3]
+            25: [criterion_4, alternative_1, five point scale, 3]
+            26: [criterion_4, alternative_2, five point scale, 3]
+            27: [criterion_4, alternative_3, five point scale, 4]
+            28: [criterion_4, alternative_4, five point scale, 5]
+            31: [criterion_4, alternative_7, five point scale, 4]
+            32: [criterion_4, alternative_8, five point scale, 5]
+            33: [criterion_4, alternative_9, five point scale, 2]
+            34: [criterion_4, alternative_10, five point scale, 4]
+            35: [criterion_4, alternative_11, five point scale, 1]
+            36: [criterion_4, alternative_12, five point scale, 2]
+
+    role_4:
+      name: Customer
+      prioritize: 0
+      PlannedAlternativeMeasurement:
+      <?php for ($i = 1; $i <= 12; $i++) : ?>
+  <?php echo $i ?>: [criterion_2, alternative_<?php echo $i ?>]<?php echo "\n" ?>
+      <?php endfor ?>
+
+      Response:
+        response_1:
+          email_address: demo
+          ip_address: 127.0.0.1
+          AlternativeMeasurement:
+            1: [criterion_2, alternative_1, five point scale, 2]
+            2: [criterion_2, alternative_2, five point scale, 5]
+            3: [criterion_2, alternative_3, five point scale, 3]
+            4: [criterion_2, alternative_4, five point scale, 2]
+            5: [criterion_2, alternative_5, five point scale, 5]
+            6: [criterion_2, alternative_6, five point scale, 2]
+            7: [criterion_2, alternative_7, five point scale, 5]
+            8: [criterion_2, alternative_8, five point scale, 3]
+            9: [criterion_2, alternative_9, five point scale, 3]
+            10: [criterion_2, alternative_10, five point scale, 5]
+            11: [criterion_2, alternative_11, five point scale, 4]
+            12: [criterion_2, alternative_12, five point scale, 4]
+
+decision_2:
+  name: Demo - Project Portfolio Management
+  objective: To find the most optimal mix of projects given our limited budget.
+  type_id: 4
+  Alternative:
+    alternative_1:
+      name: Netscaler optimization
+      additional_info: It is necessary to make a optimize how netscaler is set up.
+    alternative_2:
+      name: Bring your own device
+      additional_info: Make it possible for employees to work on their own devices.
+    alternative_3:
+      name: Upgrade of Microsoft sharepoint
+    alternative_4:
+      name: Electronic invoices
+      additional_info: Make it possible to send and receive electronic invoices
+    alternative_5:
+      name: Supply Chain information in Datawarehouse
+      additional_info: The purpose of this project is to bring Supply Chain information into the data warehouse.
+    alternative_6:
+      name: Bizztalk implementation
+      additional_info: Implementation of bizztalk as a an enterprise service bus.
+  Criterion:
+    criterion_1:
+      name: Strategic alignment
+      description: How well does the project align to the strategic goals of the company.
+      measurement: five point scale
+      variable_type: Benefit
+    criterion_2:
+      name: Return on Investment
+      description: IRR (Internal rate of return)
+      measurement: direct rating
+      variable_type: Benefit
+    criterion_3:
+      name: Risk
+      description: How risky is this project. Please place the least risky at the top.
+      measurement: forced ranking
+      variable_type: Info
+    criterion_4:
+      name: Cost
+      measurement: direct rating
+      variable_type: Cost
+  Roles:
+    role_1:
+      name: Portofolio analyst
+      prioritize: 0
+      PlannedAlternativeMeasurement:
+      <?php for ($i = 1; $i <= 6; $i++) : ?>
+  <?php echo $i ?>: [criterion_1, alternative_<?php echo $i ?>]<?php echo "\n" ?>
+        2<?php echo $i ?>: [criterion_2, alternative_<?php echo $i ?>]<?php echo "\n" ?>
+        3<?php echo $i ?>: [criterion_3, alternative_<?php echo $i ?>]<?php echo "\n" ?>
+        4<?php echo $i ?>: [criterion_4, alternative_<?php echo $i ?>]<?php echo "\n" ?>
+      <?php endfor ?>
+
+      Response:
+        response_1:
+          email_address: demo
+          ip_address: 127.0.0.1
+          AlternativeMeasurement:
+            1: [criterion_4, alternative_1, direct rating, 100]
+            2: [criterion_4, alternative_2, direct rating, 1200]
+            3: [criterion_4, alternative_3, direct rating, 130]
+            4: [criterion_4, alternative_4, direct rating, 500]
+            5: [criterion_4, alternative_5, direct rating, 700]
+            6: [criterion_4, alternative_6, direct rating, 2000]
+            7: [criterion_3, alternative_1, forced ranking, 2]
+            8: [criterion_3, alternative_2, forced ranking, 5]
+            9: [criterion_3, alternative_3, forced ranking, 3]
+            10: [criterion_3, alternative_4, forced ranking, 2]
+            11: [criterion_3, alternative_5, forced ranking, 1]
+            12: [criterion_3, alternative_6, forced ranking, 3]
+            13: [criterion_2, alternative_1, direct rating, 10]
+            14: [criterion_2, alternative_2, direct rating, 17]
+            15: [criterion_2, alternative_3, direct rating, 23]
+            16: [criterion_2, alternative_4, direct rating, 5]
+            17: [criterion_2, alternative_5, direct rating, 39]
+            18: [criterion_2, alternative_6, direct rating, 21]
+            19: [criterion_1, alternative_1, five point scale, 2]
+            20: [criterion_1, alternative_2, five point scale, 3]
+            21: [criterion_1, alternative_3, five point scale, 2]
+            22: [criterion_1, alternative_4, five point scale, 1]
+            23: [criterion_1, alternative_5, five point scale, 5]
+            24: [criterion_1, alternative_6, five point scale, 3]

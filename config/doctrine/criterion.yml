@@ -1,0 +1,55 @@
+Criterion:
+  options:
+    symfony:
+      filter: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    name:
+      type: string(255)
+      notnull: true
+    description: string
+    measurement:
+      type: enum
+      values: ['direct rating', 'direct float', 'forced ranking', 'five point scale', 'ten point scale', 'comment']
+      default: 'five point scale'
+    variable_type:
+      type: enum
+      values: ['Benefit', 'Cost', 'Info']
+      default: Benefit
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: root_id
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+
+PopularCriterion:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    name: string(255)
+    description: string
+    measurement:
+      type: enum
+      values: ['direct rating', 'direct float', 'forced ranking', 'five point scale', 'ten point scale', 'comment']
+      default: 'five point scale'
+    variable_type:
+      type: enum
+      values: ['Benefit', 'Cost', 'Info']
+      default: Benefit

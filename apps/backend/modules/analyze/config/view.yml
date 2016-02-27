@@ -1,0 +1,39 @@
+cumulativeImageSuccess:
+  javascripts:
+    - /libs/jquery-jqplot/jquery.jqplot.min.js
+    - /libs/jquery-jqplot/jqplot.pointLabels.min.js
+    - /libs/jquery-jqplot/jqplot.canvasAxisLabelRenderer.min.js
+    - /libs/jquery-jqplot/jqplot.canvasTextRenderer.min.js
+  stylesheets:
+    - /libs/jquery-jqplot/jquery.jqplot.css
+
+alternativesImageSuccess:
+  javascripts:
+    - /libs/jquery-jqplot/jquery.jqplot.min.js
+    - /libs/jquery-jqplot/jqplot.categoryAxisRenderer.min.js
+    - /libs/jquery-jqplot/jqplot.barRenderer.min.js
+    - /libs/jquery-jqplot/jqplot.pointLabels.min.js
+  stylesheets:
+    - /libs/jquery-jqplot/jquery.jqplot.css
+
+radarImageSuccess:
+  javascripts:
+    - /libs/chart/Chart.min.js
+
+bubbleImageSuccess:
+  javascripts:
+    - /libs/jquery-jqplot/jquery.jqplot.min.js
+    - /libs/jquery-jqplot/jqplot.bubbleRenderer.min.js
+  stylesheets:
+    - /libs/jquery-jqplot/jquery.jqplot.css
+
+criteriaImageSuccess:
+  javascripts:
+    - /libs/jquery-editablebars/jquery.editablebars.js?v=1.0
+
+xyImageSuccess:
+  javascripts:
+    - /libs/jquery-jqplot/jquery.jqplot.min.js
+    - /libs/jquery-jqplot/jqplot.pointLabels.min.js
+  stylesheets:
+    - /libs/jquery-jqplot/jquery.jqplot.css

@@ -1,0 +1,383 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: page, action: index }
+
+products:
+  url:   /producttour
+  param: { module: page, action: products }
+
+pricing:
+  url:   /price
+  param: { module: page, action: pricing }
+
+about:
+  url:   /about
+  param: { module: page, action: about }
+
+customers:
+  url:   /customers
+  param: { module: page, action: customers }
+
+careers:
+  url: /careers
+  param: { module: page, action: careers }
+
+support:
+  url: /support
+  param: { module: page, action: support }
+
+contact:
+  url: /contact
+  param: { module: page, action: contact }
+
+terms:
+  url: /terms
+  param: { module: page, action: terms }
+
+promo:
+  url: /promo
+  param: { module: page, action: promo }
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_auth:
+  url:   /auth/:auth_method
+  param: { module: sfGuardAuth, action: auth }
+  requirements:
+    sf_method: [get]
+
+measure:
+  url:     /role/:token/measure
+  class:   sfRequestRoute
+  param:   { module: measure, action: index }
+  requirements:
+    sf_method: [get]
+
+# Measure routes
+
+measure\start:
+  url:     /measure/:token/start
+  class:   sfRequestRoute
+  param:   { module: measure, action: start }
+  requirements:
+    sf_method: [post]
+
+measure\comments:
+  url:     /measure/:token/comments
+  class:   sfRequestRoute
+  param:   { module: measure, action: comments }
+  requirements:
+    sf_method: [get]
+
+measure\download:
+  url:     /measure/:token/file/:id/download
+  class:   sfDoctrineRoute
+  options: { model: UploadedFile, type: object }
+  param:   { module: measure, action: download }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+measure\finish:
+  url:     /measure/:token/finish
+  class:   sfRequestRoute
+  param:   { module: measure, action: finish }
+  requirements:
+    sf_method: [get]
+
+measure\chartRevert:
+  url:     /measure/:token/chart/revert
+  class:   sfRequestRoute
+  param:   { module: measure, action: chartRevert }
+  requirements:
+    sf_method: [get]
+
+measure\chartUpdate:
+  url:     /measure/:token/update
+  class:   sfRequestRoute
+  param:   { module: measure, action: chartUpdate }
+  requirements:
+    sf_method: [post]
+
+measure\measure:
+  url:     /measure/:token
+  class:   sfRequestRoute
+  param:   { module: measure, action: measure }
+  requirements:
+    sf_method: [get]
+
+measure\commentSave:
+  url:     /measure/:token/comment/save
+  class:   sfRequestRoute
+  param:   { module: measure, action: commentSave }
+  requirements:
+    sf_method: [post]
+
+measure\measureSave:
+  url:     /measure/:token/save
+  class:   sfRequestRoute
+  param:   { module: measure, action: measureSave }
+  requirements:
+    sf_method: [post]
+
+measure\collectItems:
+  url:   /measure/collect-items/:token
+  class: sfRequestRoute
+  param: { module: measure, action: collectItems }
+  requirements:
+    sf_method: [get]
+
+measure\itemSuggestionSave:
+  url:   /measure/item-suggestion/:token/save
+  class: sfRequestRoute
+  param: { module: measure, action: itemSuggestionSave }
+  requirements:
+    sf_method: [post]
+
+measure\alternativeVote:
+  url:   /measure/alternative/:id/vote
+  class: sfRequestRoute
+  param: { module: measure, action: alternativeVote }
+  requirements:
+    sf_method: [get]
+
+
+# roadmap
+
+roadmapview:
+  url:     /view-roadmap/:token
+  class:   sfRequestRoute
+  param:   { module: roadmapView, action: index }
+  requirements:
+    sf_method: [get]
+
+# Wall routes
+
+wall:
+  url:     /wall/:token
+  class:   sfRequestRoute
+  param:   { module: wall, action: index }
+  requirements:
+    sf_method: [get]
+
+sf_guard_register\quick:
+  url:     /register/quick
+  class:   sfRequestRoute
+  param:   { module: sfGuardRegister, action: quick }
+  requirements:
+    sf_method: [post]
+
+sf_guard_register\promo:
+  url:     /register/promo
+  class:   sfRequestRoute
+  param:   { module: sfGuardRegister, action: promo }
+  requirements:
+    sf_method: [post]
+
+sf_guard_register\confirmation:
+  url:     /register/confirmation/:token
+  class:   sfRequestRoute
+  param:   { module: sfGuardRegister, action: confirmation }
+  requirements:
+    sf_method: [get]
+
+subscribe:
+  url:     /subscribe
+  class:   sfRequestRoute
+  param:   { module: page, action: subscribe }
+  requirements:
+    sf_method: [post]
+
+# API routes
+
+api\user:
+  url:     /api/account/user
+  class:   sfRequestRoute
+  param:   { module: api, action: user }
+  requirements:
+    sf_method: [get]
+
+api\projectList:
+  url:     /api/project/list
+  class:   sfRequestRoute
+  param:   { module: api, action: projectList }
+  requirements:
+    sf_method: [get]
+
+api\projectDetails:
+  url:     /api/project/:id/details
+  class:   sfRequestRoute
+  param:   { module: api, action: projectDetails }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+api\projectCreate:
+  url:     /api/project/create
+  class:   sfRequestRoute
+  param:   { module: api, action: projectCreate }
+  requirements:
+    sf_method: [post]
+
+api\projectUpdate:
+  url:     /api/project/update
+  class:   sfRequestRoute
+  param:   { module: api, action: projectCreate }
+  requirements:
+    sf_method: [put]
+
+api\itemList:
+  url:     /api/:decision_id/item/list
+  class:   sfRequestRoute
+  param:   { module: api, action: itemList }
+  requirements:
+    sf_method: [get]
+
+api\itemDetails:
+  url:     /api/item/:id/details
+  class:   sfRequestRoute
+  param:   { module: api, action: itemDetails }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+api\itemCreate:
+  url:     /api/item/create
+  class:   sfRequestRoute
+  param:   { module: api, action: itemCreate }
+  requirements:
+    sf_method: [post]
+
+api\itemUpdate:
+  url:     /api/item/update
+  class:   sfRequestRoute
+  param:   { module: api, action: itemUpdate }
+  requirements:
+    sf_method: [put]
+
+api\itemDelete:
+  url:     /api/item/delete
+  class:   sfRequestRoute
+  param:   { module: api, action: itemDelete }
+  requirements:
+    sf_method: [delete]
+
+api\criterionList:
+  url:     /api/:decision_id/criteria/list
+  class:   sfRequestRoute
+  param:   { module: api, action: itemList }
+  requirements:
+    sf_method: [get]
+
+api\criterionDetails:
+  url:     /api/criterion/:id/details
+  class:   sfRequestRoute
+  param:   { module: api, action: criterionDetails }
+  requirements:
+    sf_method: [get]
+
+api\criterionCreate:
+  url:     /api/criterion/create
+  class:   sfRequestRoute
+  param:   { module: api, action: criterionCreate }
+  requirements:
+    sf_method: [post]
+
+api\roleList:
+  url:     /api/:decision_id/role/list
+  class:   sfRequestRoute
+  param:   { module: api, action: roleList }
+  requirements:
+    sf_method: [get]
+
+api\roleDetails:
+  url:     /api/role/:id/details
+  class:   sfRequestRoute
+  param:   { module: api, action: roleDetails }
+  requirements:
+    sf_method: [get]
+
+api\roleCreate:
+  url:     /api/role/create
+  class:   sfRequestRoute
+  param:   { module: api, action: roleCreate }
+  requirements:
+    sf_method: [post]
+
+api\responseList:
+  url:     /api/:decision_id/response/list
+  class:   sfRequestRoute
+  param:   { module: api, action: responseList }
+  requirements:
+    sf_method: [get]
+
+api\responseDetails:
+  url:     /api/response/:id/details
+  class:   sfRequestRoute
+  param:   { module: api, action: responseDetails }
+  requirements:
+    sf_method: [get]
+
+api\criterionPrioritizationList:
+  url:     /api/:role_id/criterion-prioritization/list
+  class:   sfRequestRoute
+  param:   { module: api, action: criterionPrioritizationList }
+  requirements:
+    sf_method: [get]
+
+api\criterionPrioritizationDetails:
+  url:     /api/criterion-prioritization/:id/details
+  class:   sfRequestRoute
+  param:   { module: api, action: criterionPrioritizationDetails }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+api\criterionPrioritizationCreate:
+  url:     /api/criterion-prioritization/create
+  class:   sfRequestRoute
+  param:   { module: api, action: criterionPrioritizationCreate }
+  requirements:
+    sf_method: [post]
+
+api\criterionPrioritizationDelete:
+  url:     /api/criterion-prioritization/delete
+  class:   sfRequestRoute
+  param:   { module: api, action: criterionPrioritizationDelete }
+  requirements:
+    sf_method: [delete]
+
+api\alternativeMeasurementList:
+  url:     /api/:role_id/alternative-measurement/list
+  class:   sfRequestRoute
+  param:   { module: api, action: alternativeMeasurementList }
+  requirements:
+    sf_method: [get]
+
+api\alternativeMeasurementDetails:
+  url:     /api/alternative-measurement/:id/details
+  class:   sfRequestRoute
+  param:   { module: api, action: alternativeMeasurementDetails }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+api\alternativeMeasurementCreate:
+  url:     /api/alternative-measurement/create
+  class:   sfRequestRoute
+  param:   { module: api, action: alternativeMeasurementCreate }
+  requirements:
+    sf_method: [post]
+
+api\alternativeMeasurementDelete:
+  url:     /api/alternative-measurement/delete
+  class:   sfRequestRoute
+  param:   { module: api, action: alternativeMeasurementDelete }
+  requirements:
+    sf_method: [delete]

@@ -1,0 +1,26 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:
+    - /libs/bootstrap/css/bootstrap.min.css?v=3.3.2
+    - dist/main.css?v=5
+
+  javascripts:
+    - /libs/jquery/jquery-2.1.1.min.js
+    - /libs/bootstrap/js/bootstrap.min.js?v=3.3.2
+    - application.js?v=2
+    - { '//html5shim.googlecode.com/svn/trunk/html5.js': { condition: lt IE 9 } }
+
+  has_layout:     true
+  layout:         layout

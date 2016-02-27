@@ -1,0 +1,10 @@
+measureSuccess:
+  javascripts:
+    - tooltip.js
+    - /libs/jquery-colorbox/jquery.colorbox-min.js?v=1.5.14
+  stylesheets:
+    - /libs/jquery-colorbox/colorbox.css?v=1.5.14
+
+finishSuccess:
+  javascripts:
+    - mailchimp_subscribe.js

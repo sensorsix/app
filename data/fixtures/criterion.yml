@@ -1,0 +1,12 @@
+<?php
+  $measurement = array('direct rating', 'forced ranking', 'five point scale', 'ten point scale');
+  $variable_type = array('Benefit', 'Benefit', 'Cost', 'Info');
+?>
+Criterion:
+<?php for ($i = 0; $i < 4; $i++) : ?>
+  criterion_<?php echo $i ?>:
+    name: Criterion <?php echo "$i\n" ?>
+    Decision: decision_1
+    variable_type: <?php echo $variable_type[$i] . "\n" ?>
+    measurement: <?php echo $measurement[$i] . "\n" ?>
+<?php endfor ?>

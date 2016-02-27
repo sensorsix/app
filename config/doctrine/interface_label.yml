@@ -1,0 +1,18 @@
+InterfaceLabel:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    user_id:  integer
+    type:     integer
+    singular: string(64)
+    plural:   string(64)
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      foreignAlias: Roadmaps
+      class: sfGuardUser
+      onUpdate: CASCADE
+      onDelete: CASCADE

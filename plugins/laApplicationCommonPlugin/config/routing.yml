@@ -1,0 +1,140 @@
+user_profile:
+  url:     /user/account
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: index }
+  requirements:
+    sf_method: [get, post]
+    id: \d+
+
+user_profile\templateNew:
+  url:     /user/template/new
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: templateNew }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+user_profile\templateEdit:
+  url:     /user/template/:id/edit
+  class:   sfDoctrineRoute
+  options: { model: TypeTemplate, type: object }
+  param:   { module: user_profile, action: templateEdit }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+user_profile\templateFetch:
+  url:     /user/template/:id/fetch
+  class:   sfDoctrineRoute
+  options: { model: TypeTemplate, type: object }
+  param:   { module: user_profile, action: templateFetch }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+user_profile\templateUpdate:
+  url:     /user/template/:id/update
+  class:   sfDoctrineRoute
+  options: { model: TypeTemplate, type: object }
+  param:   { module: user_profile, action: templateUpdate }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+user_profile\templateDelete:
+  url:     /user/template/delete
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: templateDelete }
+  requirements:
+    sf_method: [post]
+
+user_profile\criteriaTemplateNew:
+  url:     /user/template/:template_id/criterion/new
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: criteriaTemplateNew }
+  requirements:
+    sf_method: [get]
+    template_id: \d+
+
+user_profile\criteriaTemplateEdit:
+  url:     /user/template/criterion/:id/edit
+  class:   sfDoctrineRoute
+  options: { model: CriteriaTemplate, type: object }
+  param:   { module: user_profile, action: criteriaTemplateEdit }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+user_profile\criteriaTemplateUpdate:
+  url:     /user/template/criterion/:id/update
+  class:   sfDoctrineRoute
+  options: { model: CriteriaTemplate, type: object }
+  param:   { module: user_profile, action: criteriaTemplateUpdate }
+  requirements:
+    sf_method: [post]
+    id: \d+
+
+user_profile\criteriaTemplateFetch:
+  url:     /user/template/criterion/:id/fetch
+  class:   sfDoctrineRoute
+  options: { model: CriteriaTemplate, type: object }
+  param:   { module: user_profile, action: criteriaTemplateFetch }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+user_profile\criteriaTemplateDelete:
+  url:     /user/template/criterion/delete
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: criteriaTemplateDelete }
+  requirements:
+    sf_method: [post]
+
+user_profile\generateToken:
+  url:     /user/token
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: generateToken }
+  requirements:
+    sf_method: [get]
+
+user_profile\api:
+  url:     /user/api
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: api }
+  requirements:
+    sf_method: [get]
+
+user_profile\templateEditor:
+  url:     /user/template-editor
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: templateEditor }
+  requirements:
+    sf_method: [get]
+
+user_profile\members:
+  url:     /user/members
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: members }
+  requirements:
+    sf_method: [get, post]
+
+user_profile\design:
+  url:     /user/design
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: design }
+  requirements:
+    sf_method: [get, post]
+
+user_profile\labels:
+  url:     /user/labels
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: labels }
+  requirements:
+    sf_method: [get]
+
+user_profile\edit_label:
+  url:     /user/labels
+  class:   sfRequestRoute
+  param:   { module: user_profile, action: editLabel }
+  requirements:
+    sf_method: [post]

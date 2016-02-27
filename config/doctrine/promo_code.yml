@@ -1,0 +1,13 @@
+PromoCode:
+  options:
+    symfony:
+      filter: true
+      form: true
+  columns:
+    code:
+      type: string(128)
+      notnull: true
+    account_type:
+      type: enum
+      values: [Trial, Light, Basic, Pro, Enterprise]
+      default: Trial

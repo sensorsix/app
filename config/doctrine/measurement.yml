@@ -1,0 +1,109 @@
+MeasurementMethodType:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    name: string(255)
+    description: string
+
+CriterionPrioritization:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    criterion_head_id: integer
+    criterion_tail_id: integer
+    score: float
+    response_id: integer
+    rating_method:
+      type: enum
+      values: ['direct rating', 'direct float', 'forced ranking', 'five point scale', 'ten point scale', 'pairwise comparison']
+      notnull: true
+  relations:
+    Response:
+      local: response_id
+      foreign: id
+      onDelete: CASCADE
+    CriterionHead:
+      class: Criterion
+      local: criterion_head_id
+      foreign: id
+      foreignAlias: HeadPrioritization
+      onDelete: CASCADE
+    CriterionTail:
+      class: Criterion
+      local: criterion_tail_id
+      foreign: id
+      foreignAlias: TailPrioritization
+      onDelete: CASCADE
+
+AlternativeMeasurement:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    alternative_head_id: integer
+    alternative_tail_id: integer
+    criterion_id: integer
+    score: string
+    response_id: integer
+    rating_method:
+      type: enum
+      values: ['direct rating', 'direct float', 'forced ranking', 'five point scale', 'ten point scale', 'comment']
+      notnull: true
+  relations:
+    Response:
+      local: response_id
+      foreign: id
+      onDelete: CASCADE
+    Alternative:
+      foreignAlias: Measurement
+      local: alternative_head_id
+      foreign: id
+      onDelete: CASCADE
+    Criterion:
+      local: criterion_id
+      foreign: id
+      onDelete: CASCADE
+
+Response:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    ip_address: string(16),
+    role_id: integer
+    user_id: integer
+    email_address: string(255)
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+  relations:
+    Role:
+      local: role_id
+      foreign: id
+      class: Role
+      onDelete: CASCADE
+    User:
+      local: user_id
+      foreign: id
+      class: sfGuardUser
+      onDelete: CASCADE
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE

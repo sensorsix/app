@@ -1,0 +1,158 @@
+Alternative:
+  options:
+    symfony:
+      filter: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    name:
+      type: string(255)
+      notnull: true
+    additional_info: string
+    score: integer
+    status:
+      type: enum
+      values: [Draft, Reviewed, Planned, Doing, Finished, Parked]
+      default: Draft
+    created_by:
+      type: string(255)
+    updated_by:
+      type: string(255)
+    external_id:
+      type: string(50)
+    assigned_to:
+      type: integer
+    notes:
+      type: string
+    work_progress:
+      type: tinyint
+      default: 0
+    due_date:
+      type: datetime
+    notify_date:
+      type: datetime
+    type_id:
+      type: bigint
+    item_id:
+      type: string(8)
+    custom_fields:
+      type: text
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: root_id
+  relations:
+    Files:
+      class: UploadedFile
+      refClass: AlternativeUploadedFile
+      local: alternative_id
+      foreign: uploaded_file_id
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+    Assigned:
+      class: sfGuardUser
+      local:  assigned_to
+      foreign: id
+      onDelete: SET NULL
+    AlternativeType:
+      local:  type_id
+      foreign: id
+      onUpdate: CASCADE
+      onDelete: SET NULL
+
+AlternativeLink:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    link: string(255)
+    alternative_id: integer
+  relations:
+    Alternative:
+      local: alternative_id
+      foreign: id
+      onDelete: CASCADE
+
+AlternativeUploadedFile:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    alternative_id:
+      type: integer
+      primary: true
+    uploaded_file_id:
+      type: integer
+      primary: true
+  relations:
+    Alternative:
+      onDelete: CASCADE
+    UploadedFile:
+      onDelete: CASCADE
+
+AlternativeType:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    type_id:
+      type: integer
+      notnull: true
+    name:
+      type: string(64)
+      notnull: true
+    short_name:
+      type: string(64)
+      notnull: true
+  relations:
+    DecisionType:
+      local: type_id
+      foreign: id
+      onUpdate: CASCADE
+      onDelete: CASCADE
+
+AlternativeRelation:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    from_id: integer
+    to_id: integer
+    created_by: string(255)
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        disabled: true
+  relations:
+    AlternativeFrom:
+      class: Alternative
+      local: from_id
+      foreign: id
+      onUpdate: CASCADE
+      onDelete: CASCADE
+    AlternativeTo:
+      class: Alternative
+      local: to_id
+      foreign: id
+      onUpdate: CASCADE
+      onDelete: CASCADE

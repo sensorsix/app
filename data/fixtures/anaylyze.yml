@@ -1,0 +1,9 @@
+GraphType:
+  type_1:
+    name: 'criteria'
+  type_2:
+    name: 'alternatives'
+  type_3:
+    name: 'xy'
+  type_4:
+    name: 'bubble'

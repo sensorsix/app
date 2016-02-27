@@ -1,0 +1,176 @@
+domain:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Domain
+    module:               domain
+    prefix_path:          /domain
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: sfGuardUser, action: index }
+
+user_delete:
+  url: /guard/users/:id/delete
+  class: sfDoctrineRoute
+  options: { model: sfGuardUser, type: object }
+  param: { module: sfGuardUser, action: delete }
+  requirements:
+    sf_method: [get]
+
+sf_guard_register\confirmation:
+  url:     /register/confirmation/:token
+  class:   sfRequestRoute
+  param:   { module: sfGuardRegister, action: confirmation }
+  requirements:
+    sf_method: [get]
+
+scripts_edit:
+  url:   /scripts
+  param: { module: scripts, action: edit }
+
+scripts_update:
+  url:     /scripts/:id.:sf_format
+  class:   sfDoctrineRoute
+  options: { model: Scripts, type: object }
+  param:   { module: scripts, action: update, sf_format: html }
+  requirements: { sf_method: put }
+
+logs:
+  url:   /logs
+  param: { module: logs, action: index }
+
+promo:
+  url:     /promo
+  class:   sfRequestRoute
+  param:   { module: promo, action: index }
+  requirements:
+    sf_method: [get]
+
+promo\update:
+  url:     /promo/:id/update
+  class:   sfRequestRoute
+  param:   { module: promo, action: update }
+  requirements:
+    sf_method: [put]
+    id: \d+
+
+promo\edit:
+  url:     /promo/edit/:id
+  class:   sfRequestRoute
+  param:   { module: promo, action: edit }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+promo\delete:
+  url:     /promo/:id/delete
+  class:   sfRequestRoute
+  param:   { module: promo, action: delete }
+  requirements:
+    sf_method: [delete]
+    id: \d+
+
+promo\new:
+  url:     /promo/new
+  class:   sfRequestRoute
+  param:   { module: promo, action: new }
+  requirements:
+    sf_method: [get]
+
+promo\create:
+  url:     /promo/create
+  class:   sfRequestRoute
+  param:   { module: promo, action: create }
+  requirements:
+    sf_method: [post]
+
+type_template:
+  url:     /type-template
+  class:   sfRequestRoute
+  param:   { module: type_template, action: index }
+  requirements:
+    sf_method: [get]
+
+type_template\update:
+  url:     /type-template/:id/update
+  class:   sfRequestRoute
+  param:   { module: type_template, action: update }
+  requirements:
+    sf_method: [put]
+    id: \d+
+
+type_template\edit:
+  url:     /type-template/edit/:id
+  class:   sfRequestRoute
+  param:   { module: type_template, action: edit }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+type_template\delete:
+  url:     /type-template/:id/delete
+  class:   sfRequestRoute
+  param:   { module: type_template, action: delete }
+  requirements:
+    sf_method: [delete]
+    id: \d+
+
+type_template\new:
+  url:     /type-template/new
+  class:   sfRequestRoute
+  param:   { module: type_template, action: new }
+  requirements:
+    sf_method: [get]
+
+type_template\create:
+  url:     /type-template/create
+  class:   sfRequestRoute
+  param:   { module: type_template, action: create }
+  requirements:
+    sf_method: [post]
+
+type_template\criteria_edit:
+  url:     /type-template/criteria-edit/:id
+  class:   sfRequestRoute
+  param:   { module: type_template, action: criteriaEdit }
+  requirements:
+    sf_method: [get]
+    id: \d+
+
+type_template\criteria_update:
+  url:     /type-template/criteria-update/:id
+  class:   sfRequestRoute
+  param:   { module: type_template, action: criteriaUpdate }
+  requirements:
+    sf_method: [put]
+    id: \d+
+
+type_template\criteria-delete:
+  url:     /type-template/criteria-delete/:id
+  class:   sfRequestRoute
+  param:   { module: type_template, action: criteriaDelete }
+  requirements:
+    sf_method: [delete]
+    id: \d+
+
+type_template\criteria-new:
+  url:     /type-template/criteria-new/:template_id
+  class:   sfRequestRoute
+  param:   { module: type_template, action: criteriaNew }
+  requirements:
+    sf_method: [get]
+    template_id: \d+
+
+type_template\criteria_create:
+  url:     /type-template/criteria-create/:template_id
+  class:   sfRequestRoute
+  param:   { module: type_template, action: criteriaCreate }
+  requirements:
+    sf_method: [post]
+    template_id: \d+

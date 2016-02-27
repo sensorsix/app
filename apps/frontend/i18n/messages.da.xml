@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+  <file original="global" source-language="en_US" datatype="plaintext">
+    <body>
+      <trans-unit>
+        <source>Next</source>
+        <target>Næste</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Back</source>
+        <target>Tilbage</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Submit answers</source>
+        <target>Afslut</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Move here</source>
+        <target>Flyt hertil</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Thank you for participating in this workspace.</source>
+        <target>Tak fordi du deltog i spørgeskemaet</target>
+      </trans-unit>
+      <trans-unit>
+        <source>The questionnaire is finished</source>
+        <target>Spørgeskemaet er afsluttet</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Get news</source>
+        <target>Tilmeld dig nyhedsbrev</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Which is most important?</source>
+        <target>Hvad er vigtigst?</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Measure</source>
+        <target>Velkommen</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Thank you for participating in this workspace</source>
+        <target>Tak fordi du vil deltage i undersøgelsen</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Please enter your email address</source>
+        <target>Skriv venligst din emailadresse</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

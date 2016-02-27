@@ -1,0 +1,45 @@
+Comment:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    alternative_id:
+      type: integer
+    criterion_id:
+      type: integer
+      notnull: true
+    text: string
+    email: string(255)
+    user_id: integer
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+    Criterion:
+      local: criterion_id
+      foreign: id
+      onDelete: CASCADE
+    Alternative:
+      local: alternative_id
+      foreign: id
+      onDelete: CASCADE
+    User:
+      local: user_id
+      foreign: id
+      class: sfGuardUser
+      onDelete: CASCADE

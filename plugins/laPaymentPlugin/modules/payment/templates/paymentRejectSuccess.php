@@ -1,0 +1,1 @@
+<h1><?php echo __('Payment rejected') ?></h1>

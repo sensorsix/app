@@ -1,0 +1,33 @@
+Wall:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    token: string(8)
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+
+WallPost:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    wall_id: integer
+    title: string(255)
+    content: string
+    comment: string
+    type: string(20)
+    params: text
+  relations:
+    Wall:
+      local: wall_id
+      foreign: id
+      onDelete: CASCADE

@@ -1,0 +1,14 @@
+indexSuccess:
+  javascripts:
+    - /libs/jquery-ui/jquery-ui.min.js?v=1.11.2
+    - /libs/underscore/underscore-min.js?v=1.6.0
+    - /libs/backbone/backbone-min.js?v=1.1.2
+    - /libs/jquery-autosave/jquery.autosave.js?v=1.0
+#    - models/row_object.js?v=3
+    - views/row_edit.js?v=8
+#    - views_new/data_table_view.js?v=4
+    - /libs/jquery-colorbox/jquery.colorbox-min.js?v=1.5.14
+    - /libs/select2/js/select2.min.js?v=4.0.0-beta.2
+  stylesheets:
+    - /libs/jquery-colorbox/colorbox.css?v=1.5.14
+    - /libs/select2/css/select2.min.css?v=4.0.0-beta.2

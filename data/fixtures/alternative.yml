@@ -1,0 +1,6 @@
+Alternative:
+<?php for ($i = 0; $i < 4; $i++) : ?>
+  alternative_<?php echo $i ?>:
+    name: Alternative <?php echo "$i\n" ?>
+    Decision: decision_1
+<?php endfor ?>

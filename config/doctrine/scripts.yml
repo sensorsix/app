@@ -1,0 +1,6 @@
+Scripts:
+  columns:
+    backend_top: varchar(2000)
+    backend_bottom: varchar(2000)
+    frontend_top: varchar(2000)
+    frontend_bottom: varchar(2000)

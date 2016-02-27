@@ -1,0 +1,24 @@
+indexSuccess:
+  javascripts:
+    - /libs/jquery-ui/jquery-ui.min.js?v=1.11.2
+    - /libs/underscore/underscore-min.js?v=1.6.0
+    - /libs/backbone/backbone-min.js?v=1.1.2
+    - models/row_object.js?v=3
+    - views/folder_show.js?v=3
+    - views/folder_edit.js?v=5
+    - views/row_edit.js?v=8
+    - views_new/data_table_view.js?v=1
+    - views/table.js?v=1
+    - /libs/bootstrap-colorselector/js/bootstrap-colorselector.js?v=0.2.0
+    - /libs/jquery-data-table/jquery.dataTables.min.js?v=1.10.5
+#    - https://api.trello.com/1/client.js?key=%APP_TRELLO_API_KEY%&dummy=.js
+  stylesheets:
+    - /libs/jquery-ui/jquery-ui.min.css?v=1.11.2
+    - /libs/bootstrap-colorselector/css/bootstrap-colorselector.css?v=0.2.0
+    - /libs/jquery-data-table/css/jquery.dataTables.part.css?v=1.10.5
+
+itemsSuccess:
+  javascripts:
+    - /libs/select2/js/select2.min.js?v=4.0.0-beta.2
+  stylesheets:
+    - /libs/select2/css/select2.min.css?v=4.0.0-beta.2

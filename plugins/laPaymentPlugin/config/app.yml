@@ -1,0 +1,18 @@
+all:
+  admin_email: gregurko@ladela.com
+
+  Payment:
+    PaypalGateway:
+      set_url:   "https://api-3t.sandbox.paypal.com/nvp"
+      do_url:    "https://www.sandbox.paypal.com/webscr&cmd=_express-checkout"
+      username:  "loader_1354182627_biz_api1.ladela.com"
+      password:  "1354182667"
+      signature: "AaJS3mBB6l0T86yoYVI5Vz4tNsRjAo8VqSvFvPAnjK8lhl39AusWxOBH"
+dev:
+  Payment:
+    PaypalGateway:
+      set_url:   "https://api-3t.sandbox.paypal.com/nvp"
+      do_url:    "https://www.sandbox.paypal.com/webscr&cmd=_express-checkout"
+      username:  "loader_1354182627_biz_api1.ladela.com"
+      password:  "1354182667"
+      signature: "AaJS3mBB6l0T86yoYVI5Vz4tNsRjAo8VqSvFvPAnjK8lhl39AusWxOBH"

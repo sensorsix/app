@@ -1,0 +1,40 @@
+PaymentTransaction:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    user_id: integer
+    refnumber:
+      type: string(20)
+    status_code:
+      type: string(20)
+    is_payed:
+      type: boolean
+      default: false
+    date_payed:
+      type: datetime
+    stamp:
+      type: string(20)
+    amount:
+      type: float
+      default: 0
+    type:
+      type: enum
+      values: [basic, pro, enterprise]
+  relations:
+    User:
+      local: user_id
+      foreignAlias: PaymentTransactions
+      class: sfGuardUser
+      onDelete: CASCADE
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s

@@ -1,0 +1,11 @@
+indexSuccess:
+  javascripts:
+    - /libs/jquery-ui/jquery-ui.min.js?v=1.11.2
+    - /libs/underscore/underscore-min.js?v=1.6.0
+    - /libs/backbone/backbone-min.js?v=1.1.2
+    - models/row_object.js?v=3
+    - views/row_edit.js?v=8
+    - views_new/data_table_view.js?v=1
+    - /libs/jquery-data-table/jquery.dataTables.min.js?v=1.10.5
+  stylesheets:
+    - /libs/jquery-data-table/css/jquery.dataTables.part.css?v=1.10.5

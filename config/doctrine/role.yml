@@ -1,0 +1,122 @@
+Role:
+  options:
+    symfony:
+      filter: false
+  columns:
+    name:
+      type: string(255)
+      notnull: true
+    decision_id: integer
+    prioritize: boolean
+    show_criteria_weights: boolean
+    show_alternatives_score: boolean
+    prioritization_method:
+      type: enum
+      values: ['forced ranking', 'five point scale', 'ten point scale', 'pairwise comparison']
+      default: 'five point scale'
+    view_matrix: boolean
+    updateable: boolean
+    anonymous: boolean
+    show_comments: boolean
+    collect_items: boolean
+    display_items: boolean
+    allow_voting: boolean
+    dashboard: boolean
+    comment: string
+    token: string(255)
+    continue_url: string(255)
+    language:
+      type: enum
+      values: [en, da]
+      default: en
+    active: boolean
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        name: updated_at
+        type: timestamp
+        format: Y-m-d H:i:s
+  relations:
+    Files:
+      class: UploadedFile
+      refClass: RoleUploadedFile
+      local: role_id
+      foreign: uploaded_file_id
+    Decision:
+      local: decision_id
+      foreign: id
+      foreignAlias: Roles
+      onDelete: CASCADE
+
+RoleUploadedFile:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    role_id:
+      type: integer
+      primary: true
+    uploaded_file_id:
+      type: integer
+      primary: true
+  relations:
+    Role:
+      onDelete: CASCADE
+    UploadedFile:
+      onDelete: CASCADE
+
+PlannedAlternativeMeasurement:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    role_id: integer
+    criterion_id: integer
+    alternative_id: integer
+  indexes:
+    role_criterion_alternative_idx:
+      fields: [role_id, criterion_id, alternative_id]
+      type: unique
+  relations:
+    Role:
+      local: role_id
+      foreign: id
+      onDelete: CASCADE
+    Criterion:
+      local: criterion_id
+      foreign: id
+      onDelete: CASCADE
+    Alternative:
+      foreignAlias: PlannedMeasurements
+      local: alternative_id
+      foreign: id
+      onDelete: CASCADE
+
+PlannedCriterionPrioritization:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    role_id: integer
+    criterion_id: integer
+  indexes:
+    role_criterion_idx:
+      fields: [role_id, criterion_id]
+      type: unique
+  relations:
+    Role:
+      local: role_id
+      foreign: id
+      onDelete: CASCADE
+      foreignAlias: PlannedCriteria
+    Criterion:
+      local: criterion_id
+      foreign: id
+      onDelete: CASCADE

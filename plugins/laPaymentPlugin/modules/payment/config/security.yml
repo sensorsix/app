@@ -1,0 +1,10 @@
+default:
+  is_secure: true
+paymentSuccess:
+  is_secure: false
+paypalSuccess:
+  is_secure: false
+paymentCancel:
+  is_secure: false
+paymentReject:
+  is_secure: false

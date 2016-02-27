@@ -1,0 +1,82 @@
+Roadmap:
+  options:
+    symfony:
+      filter: false
+      form: true
+  columns:
+    user_id: integer
+    name:
+      type: string(64)
+      notnull: true
+    description:
+      type: string
+    token:
+      type: string(6)
+      notnull: true
+    folder_id: integer
+    active:
+      type: boolean
+      default: true
+    status:
+      type: enum
+      values: [Draft, Reviewed, Approved, Under revision]
+      default: Draft
+    show_items:
+      type: boolean
+      default: false
+    show_releases:
+      type: boolean
+      default: false
+    show_dependencies:
+      type: boolean
+      default: false
+    show_description:
+      type: boolean
+      default: false
+    workspace_mode:
+      type: workspace_mode
+      values: [timeline, list]
+      default: timeline
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      foreignAlias: Roadmaps
+      class: sfGuardUser
+      onUpdate: CASCADE
+      onDelete: CASCADE
+    Folder:
+      local: folder_id
+      foreign: id
+      class: Folder
+      foreignAlias: Roadmaps
+      onUpdate: CASCADE
+      onDelete: SET NULL
+    RoadmapDecisions:
+      class: RoadmapDecision
+      local: id
+      foreign: id
+      type: many
+      foreignType: one
+
+RoadmapDecision:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    roadmap_id: bigint(20)
+    decision_id: bigint(20)
+  relations:
+    Roadmap:
+      local: roadmap_id
+      foreign: id
+      class: Roadmap
+      onUpdate: CASCADE
+      onDelete: CASCADE
+    Decision:
+      local: decision_id
+      foreign: id
+      class: Decision
+      onUpdate: CASCADE
+      onDelete: CASCADE

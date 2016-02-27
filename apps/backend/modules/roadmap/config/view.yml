@@ -1,0 +1,43 @@
+indexSuccess:
+  javascripts:
+    - /libs/jquery-ui/jquery-ui.min.js?v=1.11.2
+    - /libs/underscore/underscore-min.js?v=1.6.0
+    - /libs/backbone/backbone-min.js?v=1.1.2
+    - /libs/bootstrap-multiselect/js/bootstrap-multiselect.js?v=0.9.10
+    - /libs/bootstrap-switch/bootstrap-switch.min.js?v=3.3.2
+    - /libs/zeroclipboard/ZeroClipboard.min.js?v=2.2.0
+    - models/row_object.js?v=3
+    - views/row_edit.js?v=8
+    - views/folder_show.js?v=3
+    - views/folder_edit.js?v=5
+    - views/table.js?v=1
+    - views_new/data_table_view.js?v=1
+    - /libs/jquery-data-table/jquery.dataTables.min.js?v=1.10.5
+  stylesheets:
+    - /libs/jquery-ui/jquery-ui.min.css?v=1.11.2
+    - /libs/bootstrap-multiselect/css/bootstrap-multiselect.css?v=0.9.10
+    - /libs/bootstrap-switch/bootstrap-switch.min.css?v=3.3.2
+    - /libs/jquery-data-table/css/jquery.dataTables.part.css?v=1.10.5
+
+dashboardSuccess:
+  javascripts:
+    - /libs/underscore/underscore-min.js?v=1.6.0
+    - /libs/bootstrap-switch/bootstrap-switch.min.js?v=3.3.2
+    - /libs/bootstrap-colorselector/js/bootstrap-colorselector.js?v=0.2.0
+    - /libs/select2/js/select2.min.js?v=4.0.0-beta.2
+  stylesheets:
+    - /libs/bootstrap-switch/bootstrap-switch.min.css?v=3.3.2
+    - /libs/bootstrap-colorselector/css/bootstrap-colorselector.css?v=0.2.0
+    - /libs/select2/css/select2.min.css?v=4.0.0-beta.2
+
+timelineSuccess:
+  javascripts:
+    - /libs/underscore/underscore-min.js?v=1.6.0
+    - /libs/bootstrap-switch/bootstrap-switch.min.js?v=3.3.2
+    - /libs/bootstrap-colorselector/js/bootstrap-colorselector.js?v=0.2.0
+    - /libs/timelinejs/js/storyjs-embed.js?v=2.35.2&m=1
+    - /libs/select2/js/select2.min.js?v=4.0.0-beta.2
+  stylesheets:
+    - /libs/bootstrap-switch/bootstrap-switch.min.css?v=3.3.2
+    - /libs/bootstrap-colorselector/css/bootstrap-colorselector.css?v=0.2.0
+    - /libs/select2/css/select2.min.css?v=4.0.0-beta.2

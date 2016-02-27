@@ -1,0 +1,317 @@
+Graph:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    graph_type_id: integer
+    decision_id:
+      type: integer
+      notnull: true
+    description: string
+  relations:
+    Type:
+      local: graph_type_id
+      class: GraphType
+      foreign: id
+      onDelete: CASCADE
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+
+GraphType:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    name: string(255)
+
+GraphDefinition:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    graph_id:
+      type: integer
+      notnull: true
+    number:
+      type: decimal(20)
+      scale: 1
+    criterion_id:
+      type: integer
+      notnull: true
+    alternative_id: integer
+  relations:
+    Graph:
+      local: graph_id
+      foreign: id
+      onDelete: CASCADE
+    Criterion:
+      local: criterion_id
+      foreign: id
+      onDelete: CASCADE
+    Alternative:
+      local: alternative_id
+      foreign: id
+      onDelete: CASCADE
+
+GraphChanges:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    graph_id:
+      type: integer
+      notnull: true
+    number:
+      type: decimal(20)
+      scale: 1
+    criterion_id:
+      type: integer
+      notnull: true
+  relations:
+    Graph:
+      local: graph_id
+      foreign: id
+      onDelete: CASCADE
+    Criterion:
+      local: criterion_id
+      foreign: id
+      onDelete: CASCADE
+
+ProjectRelease:
+  options:
+    symfony:
+      filter: false
+      form: true
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    criterion_id:
+      type: integer
+    name: string(255)
+    status:
+      type: enum
+      values: [Draft, Reviewed, Planned, Doing, Finished, Parked]
+      default: Draft
+    start_date:
+      type: timestamp
+      format: Y-m-d H:i:s
+    end_date:
+      type: timestamp
+      format: Y-m-d H:i:s
+    value:
+      type: decimal(20)
+      scale: 2
+      default: 0
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+    Criterion:
+      local: criterion_id
+      foreign: id
+      onDelete: CASCADE
+
+ProjectReleaseAlternative:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    release_id:
+      type: integer
+      notnull: true
+    alternative_id:
+      type: integer
+      notnull: true
+    value:
+      type: decimal(20)
+      scale: 2
+  relations:
+    ProjectRelease:
+      local: release_id
+      foreign: id
+      onDelete: CASCADE
+    Alternative:
+      local: alternative_id
+      foreign: id
+      onDelete: CASCADE
+
+LogicalFilter:
+  options:
+    symfony:
+      filter: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    criterion_id:
+      type: integer
+      notnull: true
+    logical_operator:
+      type: enum
+      values: ['>', '<', '=']
+      notnull: true
+    value: integer
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+    Criterion:
+      local: criterion_id
+      foreign: id
+      onDelete: CASCADE
+
+RoleFilter:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    role_id:
+      type: integer
+      notnull: true
+  indexes:
+    role_filter_decsion_idx:
+      fields: [role_id, decision_id]
+      type: unique
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+    Role:
+      local: role_id
+      foreign: id
+      onDelete: CASCADE
+
+StatusFilter:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    status:
+      type: enum
+      values: [Draft, Reviewed, Planned, Doing, Finished, Parked]
+      default: Draft
+  indexes:
+    status_filter_decsion_idx:
+      fields: [decision_id]
+      type: unique
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+
+TagFilter:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    tag_id:
+      type: integer
+      notnull: true
+  indexes:
+    status_filter_decsion_idx:
+      fields: [decision_id, tag_id]
+      type: unique
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+    Tag:
+      local: tag_id
+      foreign: id
+      onDelete: CASCADE
+
+AnalyzeCollapse:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    decision_id:
+      type: integer
+      notnull: true
+    filter:
+      type: boolean
+      default: true
+    logic_filter:
+      type: boolean
+      default: false
+    role:
+      type: boolean
+      default: false
+    criteria_weights:
+      type: boolean
+      default: false
+    bar_chart:
+      type: boolean
+      default: false
+    alternative_score:
+      type: boolean
+      default: false
+    stacked_bar:
+      type: boolean
+      default: false
+    graphs:
+      type: boolean
+      default: false
+    xy_plot:
+      type: boolean
+      default: false
+    bubble_plot:
+      type: boolean
+      default: false
+    cumulative_gain:
+      type: boolean
+      default: false
+    cost_allocation:
+      type: boolean
+      default: true
+    budget_allocation:
+      type: boolean
+      default: false
+    partitions:
+      type: boolean
+      default: true
+    partition_allocation:
+      type: boolean
+      default: false
+    comments:
+      type: boolean
+      default: true
+    status_filter:
+      type: boolean
+      default: true
+    tag_filter:
+      type: boolean
+      default: true
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      type: one
+      foreignType: one
+      onDelete: CASCADE

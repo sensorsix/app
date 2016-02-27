@@ -1,0 +1,26 @@
+Log:
+  options:
+    symfony:
+      filter: true
+      form: true
+  columns:
+    user_id: integer
+    action:
+      type: enum
+      values: ['login', 'project_create','folder_create', 'item_create','item_update', 'criteria_create','criteria_update','survey_create','survey_update','survey_answered','budget_create','budget_update','release_create','release_update','wall_update','wall_visit','roadmap_create','roadmap_update']
+      default: 'login'
+    information: varchar(2000)
+  actAs:
+    Timestampable:
+      created:
+        name: created_at
+        type: timestamp
+        format: Y-m-d H:i:s
+      updated:
+        disabled: true
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      class: sfGuardUser
+      onDelete: CASCADE

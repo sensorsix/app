@@ -1,0 +1,251 @@
+TypeTemplate:
+  template_1:
+    name: Default
+    alternative_alias: Alternative
+    alternative_plural_alias: Alternatives
+    partitioner_alias: Partition
+    Type: decision_type_1
+  template_2:
+    name: Default
+    alternative_alias: Product feature
+    alternative_plural_alias: Product features
+    partitioner_alias: Release
+    Type: decision_type_2
+  template_3:
+    name: Scrum
+    alternative_alias: Userstories
+    alternative_plural_alias: Userstories
+    partitioner_alias: Sprint
+    Type: decision_type_2
+  template_4:
+    name: Traditional
+    alternative_alias: Product feature
+    alternative_plural_alias: Product features
+    partitioner_alias: Release
+    Type: decision_type_2
+  template_5:
+    name: Persona Analysis
+    alternative_alias: Product features
+    alternative_plural_alias: Product features
+    partitioner_alias: Release
+    Type: decision_type_2
+  template_6:
+    name: Default
+    alternative_alias: Supplier
+    alternative_plural_alias: Suppliers
+    Type: decision_type_3
+  template_7:
+    name: Vendor selection
+    alternative_alias: Vendor
+    alternative_plural_alias: Vendors
+    Type: decision_type_3
+  template_8:
+    name: Partner selection
+    alternative_alias: Partner
+    alternative_plural_alias: Partners
+    Type: decision_type_3
+  template_9:
+    name: Default
+    alternative_alias: Item
+    alternative_plural_alias: Items    
+    partitioner_alias: Portfolio
+    Type: decision_type_4
+  template_10:
+    name: Projects Portfolio Management
+    alternative_alias: Projects
+    alternative_plural_alias: Projects
+    partitioner_alias: Program
+    Type: decision_type_4
+  template_11:
+    name: Application Portfolio Management
+    alternative_alias: Application
+    alternative_plural_alias: Applications
+    partitioner_alias: Portfolio
+    Type: decision_type_4
+  template_12:
+    name: Product Portfolio Management
+    alternative_alias: Product
+    alternative_plural_alias: Products
+    partitioner_alias: Product line
+    Type: decision_type_4
+  template_13:
+    name: Product Portfolio Management
+    alternative_alias: Product
+    alternative_plural_alias: Products
+    partitioner_alias: Product line
+    Type: decision_type_4
+  template_14:
+    name: Default
+    alternative_alias: Candidate
+    alternative_plural_alias: Candidates
+    partitioner_alias: Short list
+    Type: decision_type_5
+  template_15:
+    name: New position
+    alternative_alias: Candidate
+    alternative_plural_alias: Candidates
+    partitioner_alias: Short list
+    Type: decision_type_5
+  template_16:
+    name: Team formation
+    alternative_alias: Candidate
+    alternative_plural_alias: Candidates
+    partitioner_alias: Team
+    Type: decision_type_5
+
+CriteriaTemplate:
+  storypoints:
+    name: Storypoints
+    measurement: direct rating
+    variable_type: Cost
+    Template: template_3
+  priority:
+    name: Priority
+    Template: template_3
+  customer_value:
+    name: Customer value
+    Template: template_4
+  feasibility:
+    name: Feasibility
+    Template: template_4
+  hour_estimate:
+    name: Hour estimate
+    measurement: direct rating
+    variable_type: Cost
+    Template: template_4
+  value_persona_1:
+    name: Value for persona 1
+    measurement: ten point scale
+    Template: template_5
+  value_persona_2:
+    name: Value for persona 2
+    measurement: ten point scale
+    Template: template_5
+  value_persona_3:
+    name: Value for persona 3
+    measurement: ten point scale
+    Template: template_5
+  hour_estimate_2:
+    name: Hour estimate
+    measurement: direct rating
+    variable_type: Cost
+    Template: template_5
+  functionality:
+    name: Functionality
+    Template: template_7
+  integration:
+    name: Integration
+    Template: template_7
+  low_risk:
+    name: Low risk
+    Template: template_7
+  strategic_alignment:
+    name: Strategic alignment
+    Template: template_7
+  implementation:
+    name: Implementation
+    Template: template_7
+  operation:
+    name: Operation
+    Template: template_7
+  total_cost:
+    name: Total cost
+    measurement: direct rating
+    variable_type: Cost
+    Template: template_7
+  strategic_match:
+    name: Strategic match
+    Template: template_8
+  cultural_fit:
+    name: Cultural fit
+    Template: template_8
+  experience:
+    name: Experience
+    Template: template_8
+  cost:
+    name: Cost
+    variable_type: Cost
+    Template: template_8
+  strategic_alignment:
+    name: Strategic alignment
+    Template: template_11
+  complexity:
+    name: Complexity
+    Template: template_11
+  risk:
+    name: Risk
+    variable_type: Info
+    Template: template_11
+  cost_2:
+    name: Cost
+    measurement: direct rating
+    variable_type: Cost
+    Template: template_11
+  functional_quality:
+    name: Functional quality
+    Template: template_12
+  business_value:
+    name: Business value
+    Template: template_12
+  cost_3:
+    name: Cost
+    measurement: direct rating
+    variable_type: Cost
+    Template: template_13
+  relevant_skills:
+    name: Relevant skills
+    Template: template_15
+  personality:
+    name: Relevant skills
+    Template: template_15
+  availability:
+    name: Availability
+    measurement: direct rating
+    variable_type: Cost
+    Template: template_16
+  experience:
+    name: Experience
+    Template: template_16
+
+RoleTemplate:
+  product_owner:
+    name: Product owner
+    Template: template_3
+  customer:
+    name: Customer
+    Template: template_4
+  analyst:
+    name: Analyst
+    Template: template_5
+  developer_2:
+    name: Developer
+    Template: template_5
+
+Decision:
+  decision_1:
+    user_id: 1
+    name: Recrute new marketing manager
+    Type: decision_type_1
+    Template: template_1
+  decision_2:
+    user_id: 1
+    name: Project New iPhone app
+    Type: decision_type_2
+    Template: template_2
+  decision_3:
+    user_id: 1
+    name: Select ERM system
+    Type: decision_type_3
+    Template: template_6
+
+DecisionType:
+  decision_type_1:
+    name: Generic
+  decision_type_2:
+    name: Product development
+  decision_type_3:
+    name: Supplier selection
+  decision_type_4:
+    name: Project portfolio management
+  decision_type_5:
+    name: Recruitment

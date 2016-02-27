@@ -1,0 +1,9 @@
+UploadedFile:
+  options:
+    symfony:
+      filter: false
+      form: false
+  columns:
+    name: string(255)
+    mime_type: string(255)
+    path: string(255)

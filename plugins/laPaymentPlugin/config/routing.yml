@@ -1,0 +1,29 @@
+payment\paypalSet:
+  class: sfRoute
+  url: /payment/paypal/set
+  param:
+    module: payment
+    action: paypalSet
+
+payment\success:
+  class: sfRoute
+  url: /payment/paypal/:type/success
+  param:
+    module: payment
+    action: paymentSuccess
+  requirements:
+    type: (?:basic|pro|enterprise)
+
+payment\cancel:
+  class: sfRoute
+  url: /payment/paypal/cancel
+  param:
+    module: payment
+    action: paymentCancel
+
+payment\reject:
+  class: sfRoute
+  url: /payment/paypal/reject
+  param:
+    module: payment
+    action: paymentReject

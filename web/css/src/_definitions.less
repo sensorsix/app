@@ -1,0 +1,113 @@
+// FUNCTIONS
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+.square(@size) {
+  .size(@size, @size);
+}
+
+.text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.border-radius(@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.placeholder(@color) {
+  &:-moz-placeholder {
+    color: @color;
+  }
+  // Firefox 4-18
+  &::-moz-placeholder {
+    color: @color;
+  }
+  // Firefox 19+
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+  // Internet Explorer 10+
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+  // Safari and Chrome
+}
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+// END FUNCTIONS ---
+
+// GLOBAL COLORS
+@white-color: #ffffff;
+@dark-blue: #072b5d;
+@dark-gray: #343537;
+@green: #5aa659;
+@gray: #878889;
+@light-gray: #d0d1d2;
+@light-gray2: #dadbdc;
+@light-green: #d4e7d4;
+@light-pale: #e3e3e0;
+@light-light-pale: #eff0f1;
+// END GLOBAL COLORS ---
+
+// GLOBAL CLASS FUNCTIONS
+.width-locker {
+  .center-block();
+  .size(1252px, auto);
+}
+
+// END GLOBAL CLASS FUNCTIONS ---
+
+// buttons
+.btn-default.btn-inverse {
+  background-color: @dark-gray;
+  border-color: (@dark-gray - #111);
+  color: #fff;
+  &:hover {
+    background-color: (@dark-gray - #111);
+  }
+}
+
+.btn-success {
+  background-color: @green;
+}
+
+.btn-gray {
+  background-color: #878889;
+  color: #fff;
+  border: 1px (#878889 - #111) solid;
+  &:hover {
+    background-color: (#878889 - #111);
+    color: #fff;
+  }
+}
+
+

@@ -1,0 +1,72 @@
+Tag:
+  options:
+    symfony:
+      filter: true
+      form: true
+  columns:
+    user_id:
+      type: integer
+      notnull: true
+    name:
+      type: varchar(127)
+      notnull: true
+  relations:
+    User:
+      local: user_id
+      foreign: id
+      class: sfGuardUser
+      onDelete: CASCADE
+
+TagDecision:
+  options:
+    symfony:
+      filter: true
+      form: true
+  columns:
+    tag_id: integer
+    decision_id: integer
+  relations:
+    Decision:
+      local: decision_id
+      foreign: id
+      onDelete: CASCADE
+    Tag:
+      local: tag_id
+      foreign: id
+      onDelete: CASCADE
+
+TagAlternative:
+  options:
+    symfony:
+      filter: true
+      form: true
+  columns:
+    tag_id: integer
+    alternative_id: integer
+  relations:
+    Alternative:
+      local: alternative_id
+      foreign: id
+      onDelete: CASCADE
+    Tag:
+      local: tag_id
+      foreign: id
+      onDelete: CASCADE
+
+TagRelease:
+  options:
+    symfony:
+      filter: true
+      form: true
+  columns:
+    tag_id: integer
+    release_id: integer
+  relations:
+    ProjectRelease:
+      local: release_id
+      foreign: id
+      onDelete: CASCADE
+    Tag:
+      local: tag_id
+      foreign: id
+      onDelete: CASCADE
